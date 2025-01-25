@@ -1,0 +1,24 @@
+import Brands from "@/components/brands";
+import Gallery from "@/components/gallery/Gallery";
+import Hero from "@/components/hero";
+import Posts from "@/components/posts";
+import Section1 from "@/components/sections/Section1";
+import Section2 from "@/components/sections/Section2";
+import Section3 from "@/components/sections/Section3";
+import Section4 from "@/components/sections/Section4";
+import Marquee from "@/components/sections/marqueeText";
+export default function Home() {
+  return (
+    <div>
+      <Hero />
+      <Brands />
+      <Section1 />
+      <Section2 />
+      <Gallery title="Case studies" />
+      <Section3 />
+      <Section4 />
+      <Posts />
+      <Marquee />
+    </div>
+  );
+}

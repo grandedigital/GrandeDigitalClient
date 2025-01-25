@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Home",
+    "activeDelay": 270,
+    "normalDelay": 490,
+    "href": "/"
+  },
+  {
+    "id": 2,
+    "name": "Agency",
+    "activeDelay": 340,
+    "normalDelay": 420,
+    "href": "/agency"
+  },
+  {
+    "id": 3,
+    "name": "Expertise",
+    "activeDelay": 410,
+    "normalDelay": 350,
+    "href": "/expertise"
+  },
+  {
+    "id": 4,
+    "name": "Portfolio",
+    "activeDelay": 480,
+    "normalDelay": 280,
+    "href": "/portfolio"
+  },
+  {
+    "id": 5,
+    "name": "Contact",
+    "activeDelay": 550,
+    "normalDelay": 210,
+    "href": "/contact"
+  }
+]
