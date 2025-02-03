@@ -1,4 +1,32 @@
+"use client";
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
+import { useRef, useState } from "react";
+
 export default function Section1() {
+  const strongTextImgRef = useRef(null);
+  const circleRef = useRef(null);
+  const bottomPropRef = useRef(null);
+
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
+    window.innerWidth < 1217
+  );
+
+  const strongTextImgViewArea = useInView(strongTextImgRef, {
+    once: true,
+    amount: 1,
+  });
+
+  const circleViewArea = useInView(circleRef, {
+    once: true,
+    amount: 0.2,
+  });
+
+  const bottomPropsViewArea = useInView(bottomPropRef, {
+    once: true,
+    amount: 0.2,
+  });
+
   return (
     <section className="overflow-hidden max-2xl:py-[90px] max-mdx:py-[75px] max-md:py-[50px]">
       <div className="custom-container">
@@ -6,10 +34,20 @@ export default function Section1() {
           <div className="px-[15px] text-center max-w-full md:text-left lgx:flex-[0_0_auto] lgx:w-[41.66666667%] mdx:flex-[0_0_auto] mdx:w-[41.66666667%] max-mdx:mb-[50px] max-md:mb-[30px]">
             <h2 className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-0">
               {"We are a creative bold digital agency based in "}
-              <span className="shadow-none inline-block relative pb-0 mb-0">
+              <span
+                ref={strongTextImgRef}
+                className="shadow-none inline-block relative pb-0 mb-0"
+              >
                 london.
                 <span className="h-[45px] bottom-[-10px] -z-1 float-left w-full absolute left-0">
-                  <img
+                  <motion.img
+                    initial={!isAnimationsPassive && { width: "0%" }}
+                    animate={
+                      !isAnimationsPassive && {
+                        width: strongTextImgViewArea ? "100%" : "0%",
+                      }
+                    }
+                    transition={{ duration: 0.7, delay: 0.2 }}
                     className="h-[45px] w-full absolute left-0 bottom-0 transition-none max-w-full"
                     src="/images/demo-digital-agency-highlight-separator.webp"
                     alt=""
@@ -18,32 +56,86 @@ export default function Section1() {
               </span>
             </h2>
           </div>
-          <div className="px-[15px] max-w-full lgx:ml-[8.33333333%] lgx:flex-[0_0_auto] lgx:w-1/2 mdx:flex-[0_0_auto] mdx:w-[58.33333333%] w-full">
+          <div
+            ref={circleRef}
+            className="px-[15px] max-w-full lgx:ml-[8.33333333%] lgx:flex-[0_0_auto] lgx:w-1/2 mdx:flex-[0_0_auto] mdx:w-[58.33333333%] w-full"
+          >
             <div className="row items-center max-md:flex-col">
               <div className="px-[15px] block text-center relative max-w-full mdx:text-center md:text-left lgx:flex-[0_0_auto] lgx:w-1/2 mdx:flex-[0_0_auto] mdx:w-1/2 md:flex-[0_0_auto] md:w-[41.66666667%] max-md:mb-[30px]">
-                <span className="[background-image:linear-gradient(135deg,transparent_45%,#464646_45%,#464646_55%,transparent_0)] [background-size:_5px_5px] w-[250px] h-[250px] bg-[--dark-gray2] rounded-[50%] items-center justify-center flex">
+                <motion.span
+                  initial={!isAnimationsPassive && { scale: 1.1, opacity: 0 }}
+                  animate={
+                    !isAnimationsPassive && {
+                      scale: circleViewArea ? 1 : 1.1,
+                      opacity: circleViewArea ? 1 : 0,
+                    }
+                  }
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="[background-image:linear-gradient(135deg,transparent_45%,#464646_45%,#464646_55%,transparent_0)] [background-size:_5px_5px] w-[250px] h-[250px] bg-[--dark-gray2] rounded-[50%] items-center justify-center flex"
+                >
                   <span className="font-bold w-full tracking-[-4px] text-[6.875rem] leading-[6.875rem] font-spaceGrotesk text-white justify-center flex">
                     {"20 "}
                     <sub className="font-medium top-0 text-[2.5rem] leading-[2.5rem] relative align-top bottom-[-0.25em]">
                       +
                     </sub>
                   </span>
-                </span>
+                </motion.span>
               </div>
               <div className="px-[15px] text-center max-w-full md:text-left md:flex-[0_0_auto] md:w-[58.33333333%] mdx:flex-[0_0_auto] mdx:w-1/2 lgx:flex-[0_0_auto] lgx:w-1/2">
-                <span className="font-bold mb-[5px] tracking-[0.5px] text-[--dark-gray2] text-[16px] uppercase block">
+                <motion.span
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  initial={
+                    !isAnimationsPassive && { translateY: -15, opacity: 0 }
+                  }
+                  animate={
+                    !isAnimationsPassive && {
+                      translateY: circleViewArea ? 0 : -15,
+                      opacity: circleViewArea ? 1 : 0,
+                    }
+                  }
+                  className="font-bold mb-[5px] tracking-[0.5px] text-[--dark-gray2] text-[16px] uppercase block"
+                >
                   20+ years of experience
-                </span>
-                <p className="mb-0 leading-[2rem] text-[18px] mt-0">
+                </motion.span>
+                <motion.p
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  initial={
+                    !isAnimationsPassive && { translateY: -15, opacity: 0 }
+                  }
+                  animate={
+                    !isAnimationsPassive && {
+                      translateY: circleViewArea ? 0 : -15,
+                      opacity: circleViewArea ? 1 : 0,
+                    }
+                  }
+                  className="mb-0 leading-[2rem] text-[18px] mt-0"
+                >
                   We are dedicated to providing outstanding digital and design
                   services meet the functional and aesthetic.
-                </p>
+                </motion.p>
               </div>
             </div>
           </div>
         </div>
-        <div className="row justify-center">
-          <div className="pr-[5%] pl-[15px] flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[33.33333333%] max-mdx:mb-[30px]">
+        <div ref={bottomPropRef} className="row justify-center">
+          <motion.div
+            initial={
+              !isAnimationsPassive && {
+                translateY: 30,
+                translateX: 30,
+                opacity: 0,
+              }
+            }
+            animate={
+              !isAnimationsPassive && {
+                translateY: bottomPropsViewArea ? 0 : 30,
+                translateX: bottomPropsViewArea ? 0 : 30,
+                opacity: bottomPropsViewArea ? 1 : 0,
+              }
+            }
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="pr-[5%] pl-[15px] flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[33.33333333%] max-mdx:mb-[30px]"
+          >
             <div className="mb-[30px] w-full bg-[--extra-medium-gray] h-[1px] hidden mdx:block"></div>
             <div className="flex flex-row flex-wrap items-stretch justify-start text-left relative z-1">
               <div className="flex-1">
@@ -63,8 +155,25 @@ export default function Section1() {
                 />
               </div>
             </div>
-          </div>
-          <div className="pr-[5%] pl-[15px] flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[33.33333333%] max-mdx:mb-[30px]">
+          </motion.div>
+          <motion.div
+            initial={
+              !isAnimationsPassive && {
+                translateY: 30,
+                translateX: 30,
+                opacity: 0,
+              }
+            }
+            animate={
+              !isAnimationsPassive && {
+                translateY: bottomPropsViewArea ? 0 : 30,
+                translateX: bottomPropsViewArea ? 0 : 30,
+                opacity: bottomPropsViewArea ? 1 : 0,
+              }
+            }
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="pr-[5%] pl-[15px] flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[33.33333333%] max-mdx:mb-[30px]"
+          >
             <div className="mb-[30px] w-full bg-[--extra-medium-gray] h-[1px] hidden mdx:block"></div>
             <div className="flex flex-row flex-wrap items-stretch justify-start text-left relative z-1">
               <div className="flex-1">
@@ -84,8 +193,25 @@ export default function Section1() {
                 />
               </div>
             </div>
-          </div>
-          <div className="pr-[5%] pl-[15px] flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[33.33333333%] max-mdx:mb-[30px]">
+          </motion.div>
+          <motion.div
+            initial={
+              !isAnimationsPassive && {
+                translateY: 30,
+                translateX: 30,
+                opacity: 0,
+              }
+            }
+            animate={
+              !isAnimationsPassive && {
+                translateY: bottomPropsViewArea ? 0 : 30,
+                translateX: bottomPropsViewArea ? 0 : 30,
+                opacity: bottomPropsViewArea ? 1 : 0,
+              }
+            }
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="pr-[5%] pl-[15px] flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[33.33333333%] max-mdx:mb-[30px]"
+          >
             <div className="mb-[30px] w-full bg-[--extra-medium-gray] h-[1px] hidden mdx:block"></div>
             <div className="flex flex-row flex-wrap items-stretch justify-start text-left relative z-1">
               <div className="flex-1">
@@ -105,7 +231,7 @@ export default function Section1() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
