@@ -168,6 +168,15 @@ ul {
   transform: scale(1.1); /* Geçiş sırasında büyüyecek */
 }
 
+/* brands alanına hover olunca tüm markalar az görünmez olur ve hangi markanın üstüne hover olur ise o tam görünür olur */
+.brands-container:hover div {
+  opacity: 0.5;
+}
+
+.brands-container div:hover {
+  opacity: 1;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 14px;
