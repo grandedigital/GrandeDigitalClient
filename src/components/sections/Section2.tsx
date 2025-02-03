@@ -1,22 +1,84 @@
+"use client";
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 
-export default function Section2() {
+export default function Section2({
+  longText = "It's so challenging to find a good team to do great things. But we can provide you the best one.",
+}) {
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
+    window.innerWidth < 1217
+  );
+
+  const longTextRef = useRef(null);
+  const titlesRef = useRef(null);
+  const titleBottomTextRef = useRef(null);
+
+  const longTextViewArea = useInView(longTextRef, {
+    once: true,
+    amount: 0.2,
+  });
+
+  const titlesViewArea = useInView(titlesRef, {
+    once: true,
+    amount: 0.2,
+  });
+
+  const titleBottomTextViewArea = useInView(titleBottomTextRef, {
+    once: true,
+    amount: 0.2,
+  });
+
   return (
     <section className="py-[130px] bg-[--nero-gray] max-2xl:py-[120px] max-mdx:py-[95px] max-md:py-[50px]">
       <div className="custom-container">
         <div className="mb-[7%] row max-md:mb-[50px]">
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full lgx:flex-[0_0_auto] lgx:w-3/4 mdx:flex-[0_0_auto] mdx:w-full">
-            <h2 className="font-medium tracking-[-2px] font-spaceGrotesk text-white mb-0">
-              <span>
-                It's so challenging to find a good team to do great things. But
-                we can provide you the best one.
-              </span>
+            <h2
+              ref={longTextRef}
+              className="font-medium tracking-[-2px] font-spaceGrotesk text-white mb-0 relative"
+            >
+              {longText.split("").map((item, index) => (
+                <motion.span
+                  transition={{ duration: 0.4, delay: index * 0.02 }}
+                  initial={
+                    !isAnimationsPassive && {
+                      opacity: 0,
+                      top: 50,
+                      filter: "blur(20px)",
+                    }
+                  }
+                  animate={
+                    !isAnimationsPassive && {
+                      opacity: longTextViewArea ? 1 : 0,
+                      top: longTextViewArea ? 0 : 50,
+                      filter: longTextViewArea ? "blur(0px)" : "blur(20px)",
+                    }
+                  }
+                  key={index}
+                  className="relative"
+                >
+                  {item}
+                </motion.span>
+              ))}
             </h2>
           </div>
         </div>
         <div className="mb-[6%] row max-md:mb-[30px]">
-          <div className="px-[15px] flex-[0_0_auto] w-full max-w-full">
-            <div className="mx-0 py-[40px] border-[--dark-gray2] border-b border-t items-center relative flex flex-wrap">
+          <div
+            ref={titlesRef}
+            className="px-[15px] flex-[0_0_auto] w-full max-w-full"
+          >
+            <motion.div
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={!isAnimationsPassive && {
+                translateY: titlesViewArea ? 0 : 30,
+                opacity: titlesViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0 }}
+              className="mx-0 py-[40px] border-[--dark-gray2] border-b border-t items-center relative flex flex-wrap"
+            >
               <div className="px-0 text-left max-w-full md:text-center md:flex-[0_0_auto] md:w-[8.33333333%] max-md:mb-[20px] w-full">
                 <span className="text-white text-[18px] font-spaceGrotesk">
                   01
@@ -47,8 +109,16 @@ export default function Section2() {
                   for small to large projects with project requirements.
                 </p>
               </div>
-            </div>
-            <div className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap">
+            </motion.div>
+            <motion.div
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={!isAnimationsPassive && {
+                translateY: titlesViewArea ? 0 : 30,
+                opacity: titlesViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap"
+            >
               <div className="px-0 text-left max-w-full md:text-center md:flex-[0_0_auto] md:w-[8.33333333%] max-md:mb-[20px] w-full">
                 <span className="text-white text-[18px] font-spaceGrotesk">
                   02
@@ -78,8 +148,16 @@ export default function Section2() {
                   for small to large projects with project requirements.
                 </p>
               </div>
-            </div>
-            <div className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap">
+            </motion.div>
+            <motion.div
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={!isAnimationsPassive && {
+                translateY: titlesViewArea ? 0 : 30,
+                opacity: titlesViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap"
+            >
               <div className="px-0 text-left max-w-full md:text-center md:flex-[0_0_auto] md:w-[8.33333333%] max-md:mb-[20px] w-full">
                 <span className="text-white text-[18px] font-spaceGrotesk">
                   03
@@ -108,8 +186,16 @@ export default function Section2() {
                   for small to large projects with project requirements.
                 </p>
               </div>
-            </div>
-            <div className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap">
+            </motion.div>
+            <motion.div
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={!isAnimationsPassive && {
+                translateY: titlesViewArea ? 0 : 30,
+                opacity: titlesViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap"
+            >
               <div className="px-0 text-left max-w-full md:text-center md:flex-[0_0_auto] md:w-[8.33333333%] max-md:mb-[20px] w-full">
                 <span className="text-white text-[18px] font-spaceGrotesk">
                   04
@@ -136,12 +222,23 @@ export default function Section2() {
                   for small to large projects with project requirements.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="row justify-center">
-          <div className="px-[15px] text-center w-full max-w-full mdx:flex-[0_0_auto] mdx:w-full md:flex-[0_0_auto] md:w-[83.33333333%]">
-            <div className="text-white text-20 tracking-[.7px]">
+          <div
+            ref={titleBottomTextRef}
+            className="px-[15px] text-center w-full max-w-full mdx:flex-[0_0_auto] mdx:w-full md:flex-[0_0_auto] md:w-[83.33333333%]"
+          >
+            <motion.div
+              transition={{ duration: 0.6 }}
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 1 }}
+              animate={!isAnimationsPassive && {
+                translateY: titleBottomTextViewArea ? 0 : 30,
+                opacity: titleBottomTextViewArea ? 1 : 0,
+              }}
+              className="text-white text-20 tracking-[.7px]"
+            >
               {
                 "Save your precious time and effort spent for finding a solution. "
               }
@@ -151,7 +248,7 @@ export default function Section2() {
               >
                 Contact us now
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
