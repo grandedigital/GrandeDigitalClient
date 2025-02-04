@@ -48,11 +48,13 @@ export default function Section3() {
         <div className="row mb-[3%] max-mdx:mb-0">
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full mdx:w-1/3 md:w-[66.66666667%] max-mdx:mb-[50px]">
             <motion.div
-              initial={{ translateY: 30, opacity: 0 }}
-              animate={{
-                translateY: stickyAreViewArea ? 0 : 30,
-                opacity: stickyAreViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: stickyAreViewArea ? 0 : 30,
+                  opacity: stickyAreViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0 }}
               ref={stickyAreaRef}
               className="top-[120px] sticky"
@@ -77,8 +79,10 @@ export default function Section3() {
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full mdx:w-[66.66666667%] md:w-full">
             <div ref={statsAreaRef} className="mx-0 flex flex-wrap">
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: statsAreaViewArea ? 1 : 0 }}
+                initial={!isAnimationsPassive && { opacity: 0 }}
+                animate={
+                  !isAnimationsPassive && { opacity: statsAreaViewArea ? 1 : 0 }
+                }
                 transition={{ duration: 0.6 }}
                 className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
               >
@@ -104,8 +108,10 @@ export default function Section3() {
                 </h2>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: statsAreaViewArea ? 1 : 0 }}
+                initial={!isAnimationsPassive && { opacity: 0 }}
+                animate={
+                  !isAnimationsPassive && { opacity: statsAreaViewArea ? 1 : 0 }
+                }
                 transition={{ duration: 0.6 }}
                 className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b border-r flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
               >
@@ -131,8 +137,10 @@ export default function Section3() {
                 </h2>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: statsAreaViewArea ? 1 : 0 }}
+                initial={!isAnimationsPassive && { opacity: 0 }}
+                animate={
+                  !isAnimationsPassive && { opacity: statsAreaViewArea ? 1 : 0 }
+                }
                 transition={{ duration: 0.6 }}
                 className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
               >
@@ -158,8 +166,10 @@ export default function Section3() {
                 </h2>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: statsAreaViewArea ? 1 : 0 }}
+                initial={!isAnimationsPassive && { opacity: 0 }}
+                animate={
+                  !isAnimationsPassive && { opacity: statsAreaViewArea ? 1 : 0 }
+                }
                 transition={{ duration: 0.6 }}
                 className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-r border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
               >
