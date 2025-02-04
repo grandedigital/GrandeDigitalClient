@@ -1,12 +1,82 @@
+"use client";
+
 import Link from "next/link";
+import React, { useState, useEffect, useRef } from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 export default function OurTeam() {
+  const [scrollY, setScrollY] = useState(0);
+  const elementRef = useRef(null);
+
+  const [sidePhotosScale, setSidePhotesScale] = useState(1);
+  const [centerPhotoScale, setCenterPhotoScale] = useState(1);
+  const [sidePhotosTranslateY, setSidePhotosTranslateY] = useState(-30);
+
+  //normalize fonksiyonu
+  function mapValue(value, min, max, rangeMin, rangeMax) {
+    if (value < min || value > max) {
+      throw new Error("Değer belirtilen min-max aralığında olmalıdır.");
+    }
+
+    return rangeMin + ((value - min) / (max - min)) * (rangeMax - rangeMin);
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      const elementPos = elementRef.current.getBoundingClientRect();
+      //animasyonu başla ve hesaplayıp güncelle
+      if (
+        elementPos.top - window.innerHeight < 0 &&
+        elementPos.top > -elementPos.height
+      ) {
+        setCenterPhotoScale(
+          mapValue(
+            window.innerHeight - elementPos.top,
+            0,
+            window.innerHeight + elementPos.height,
+            1,
+            1.2
+          )
+        );
+        setSidePhotosTranslateY(
+          mapValue(
+            window.innerHeight - elementPos.top,
+            0,
+            window.innerHeight + elementPos.height,
+            -30,
+            30
+          )
+        );
+        setSidePhotesScale(
+          mapValue(
+            window.innerHeight - elementPos.top,
+            0,
+            window.innerHeight + elementPos.height,
+            1,
+            0.7
+          )
+        );
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section className="pb-0 max-2xl:pt-[90px] mdx:pt-[75px] max-md:pt-[50px]">
       <div className="custom-container">
-        <div className="row">
-          <div className="transform scale-100 translate-y-0 transition-none px-[15px] w-full flex-[0_0_auto] max-w-full mdx:w-1/3 max-mdx:mb-[30px] xsm:w-1/2 group">
+        <div ref={elementRef} className="row">
+          <div
+            className="transform px-[15px] w-full flex-[0_0_auto] max-w-full mdx:w-1/3 max-mdx:mb-[30px] xsm:w-1/2 group transition-all ease-out duration-1500"
+            style={{
+              transform: `translateY(${sidePhotosTranslateY}px) scale(${sidePhotosScale})`,
+            }}
+          >
             <figure className="group-hover:translate-y-[-8px] [transform:translate3d(0,0,0)] transition-all duration-500 ease-[cubic-bezier(.2,0,.3,1)] mb-0 relative overflow-hidden">
               <img
                 className="transition-all duration-400 ease-[cubic-bezier(.37,0,.63,1)] max-w-full h-auto"
@@ -42,7 +112,10 @@ export default function OurTeam() {
               </figcaption>
             </figure>
           </div>
-          <div className="transform scale-100 translate-y-0 transition-none px-[15px] w-full flex-[0_0_auto] max-w-full mdx:w-1/3 max-mdx:mb-[30px] xsm:w-1/2 mt-[2%] max-mdx:mt-0 group">
+          <div
+            className="transform translate-y-0 px-[15px] w-full flex-[0_0_auto] max-w-full mdx:w-1/3 max-mdx:mb-[30px] xsm:w-1/2 mt-[2%] max-mdx:mt-0 group transition-all ease-out duration-1500"
+            style={{ transform: `scale(${centerPhotoScale})` }}
+          >
             <figure className="group-hover:translate-y-[-8px] [transform:translate3d(0,0,0)] transition-all duration-500 ease-[cubic-bezier(.2,0,.3,1)] mb-0 relative overflow-hidden">
               <img
                 className="transition-all duration-400 ease-[cubic-bezier(.37,0,.63,1)] max-w-full h-auto"
@@ -72,7 +145,12 @@ export default function OurTeam() {
               </figcaption>
             </figure>
           </div>
-          <div className="transform scale-100 translate-y-0 transition-none px-[15px] w-full flex-[0_0_auto] max-w-full mdx:w-1/3 max-mdx:mb-[30px] xsm:w-1/2 group">
+          <div
+            className="transform px-[15px] w-full flex-[0_0_auto] max-w-full mdx:w-1/3 max-mdx:mb-[30px] xsm:w-1/2 group transition-all ease-out duration-1500"
+            style={{
+              transform: `translateY(${sidePhotosTranslateY}px) scale(${sidePhotosScale})`,
+            }}
+          >
             <figure className="group-hover:translate-y-[-8px] [transform:translate3d(0,0,0)] transition-all duration-500 ease-[cubic-bezier(.2,0,.3,1)] mb-0 relative overflow-hidden">
               <img
                 className="transition-all duration-400 ease-[cubic-bezier(.37,0,.63,1)] max-w-full h-auto"
