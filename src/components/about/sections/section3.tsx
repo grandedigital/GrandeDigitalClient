@@ -20,11 +20,13 @@ export default function Section3() {
         <div ref={areaRef} className="row">
           <div className="px-[15px] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[41.66666667%] max-mdx:mb-[10px]">
             <motion.h2
-              initial={{ translateY: 15, opacity: 0 }}
-              animate={{
-                translateY: areaViewArea ? 0 : 15,
-                opacity: areaViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: areaViewArea ? 0 : 15,
+                  opacity: areaViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0 }}
               className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-[30px] max-md:mb-[25px]"
             >
@@ -44,11 +46,13 @@ export default function Section3() {
           </div>
           <div className="transition-none px-[15px] w-full max-w-full mdx:w-[58.33333333%] mdx:flex-[0_0_auto]">
             <motion.div
-              initial={{ translateY: 15, opacity: 0 }}
-              animate={{
-                translateY: areaViewArea ? 0 : 15,
-                opacity: areaViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: areaViewArea ? 0 : 15,
+                  opacity: areaViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0 }}
               className="row"
             >
@@ -66,11 +70,13 @@ export default function Section3() {
             </motion.div>
             <div className="my-[40px] border-[--extra-medium-gray] h-[1px] border-b max-md:my-[30px]"></div>
             <motion.div
-              initial={{ translateY: 15, opacity: 0 }}
-              animate={{
-                translateY: areaViewArea ? 0 : 15,
-                opacity: areaViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: areaViewArea ? 0 : 15,
+                  opacity: areaViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0.3 }}
               className="row"
             >
@@ -88,11 +94,13 @@ export default function Section3() {
             </motion.div>
             <div className="my-[40px] border-[--extra-medium-gray] h-[1px] border-b max-md:my-[30px]"></div>
             <motion.div
-              initial={{ translateY: 15, opacity: 0 }}
-              animate={{
-                translateY: areaViewArea ? 0 : 15,
-                opacity: areaViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: areaViewArea ? 0 : 15,
+                  opacity: areaViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0.6 }}
               className="row"
             >
