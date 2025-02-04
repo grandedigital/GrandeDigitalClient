@@ -15,7 +15,7 @@ export default function Section1() {
 
   const contentViewArea = useInView(contentRef, {
     once: true,
-    amount: 0.5,
+    amount: 0.1,
   });
 
   return (
@@ -47,22 +47,26 @@ export default function Section1() {
             className="px-[15px] text-center w-full max-w-full md:text-left lgx:ml-[8.33333333%] lgx:w-[41.66666667%] lgx:flex-[0_0_auto] mdx:w-1/2"
           >
             <motion.h2
-              initial={{ translateY: 30, opacity: 0 }}
-              animate={{
-                translateY: contentViewArea ? 0 : 30,
-                opacity: contentViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: contentViewArea ? 0 : 30,
+                  opacity: contentViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0 }}
               className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-[30px] max-md:mb-[25px]"
             >
               We're a creative digital agency.
             </motion.h2>
             <motion.p
-              initial={{ translateY: 30, opacity: 0 }}
-              animate={{
-                translateY: contentViewArea ? 0 : 30,
-                opacity: contentViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: contentViewArea ? 0 : 30,
+                  opacity: contentViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0.3 }}
               className="w-[85%] mb-[25px] mt-0 max-md:w-full"
             >
@@ -71,11 +75,13 @@ export default function Section1() {
               excellent web solutions is best in-class experience.
             </motion.p>
             <motion.p
-              initial={{ translateY: 30, opacity: 0 }}
-              animate={{
-                translateY: contentViewArea ? 0 : 30,
-                opacity: contentViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: contentViewArea ? 0 : 30,
+                  opacity: contentViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0.6 }}
               className="w-[85%] mb-[25px] mt-0 max-md:w-full"
             >
@@ -84,11 +90,13 @@ export default function Section1() {
               experience.
             </motion.p>
             <motion.div
-              initial={{ translateY: 30, opacity: 0 }}
-              animate={{
-                translateY: contentViewArea ? 0 : 30,
-                opacity: contentViewArea ? 1 : 0,
-              }}
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: contentViewArea ? 0 : 30,
+                  opacity: contentViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0.9 }}
               className="mt-[15px] w-full inline-block max-md:mt-0"
             >

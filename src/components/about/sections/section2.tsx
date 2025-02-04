@@ -1,15 +1,58 @@
+"use client";
+import { motion, useInView } from "motion/react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { FaRegComments } from "react-icons/fa";
 
 export default function Section2() {
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
+    window.innerWidth < 1217
+  );
+
+  const spinnerRef = useRef(null);
+  const bottomTextRef = useRef(null);
+  const bottomPropsContainerRef = useRef(null);
+
+  const spinnerViewArea = useInView(spinnerRef, {
+    once: true,
+    amount: 0.2,
+  });
+
+  const bottomTextViewArea = useInView(bottomTextRef, {
+    once: true,
+    amount: 0.1,
+  });
+
+  const bottomPropsContainerViewArea = useInView(bottomPropsContainerRef, {
+    once: true,
+    amount: 0.1,
+  });
+
   return (
     <section className="bg-[url('/images/demo-digital-agency-02.jpg')] bg-center relative overflow-hidden bg-fixed bg-cover pb-0 max-2xl:pt-[90px] max-lgx:[background-attachment:inherit] max-mdx:pt-[75px] max-md:pt-[50px]">
       <div className="bg-[--dark-gray2] opacity-30 absolute h-full w-full top-0 left-0"></div>
       <div className="custom-container relative">
         <div className="row mb-[6%] justify-center">
           <div className="px-[15px] text-center w-full max-w-full xxl:flex-[0_0_auto] xxl:w-[58.33333333%] lgx:w-[83.33333333%] lgx:flex-[0_0_auto]">
-            <Link href={"#"}>
-              <div className="z-9 mb-[40px] relative max-md:mb-[30px] [text-align:-webkit-center]">
+            <Link ref={spinnerRef} href={"#"}>
+              <motion.div
+                initial={
+                  !isAnimationsPassive && {
+                    translateY: -15,
+                    scale: 0.8,
+                    opacity: 0,
+                  }
+                }
+                animate={
+                  !isAnimationsPassive && {
+                    translateY: spinnerViewArea ? 0 : -15,
+                    scale: spinnerViewArea ? 1 : 0.8,
+                    opacity: spinnerViewArea ? 1 : 0,
+                  }
+                }
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="z-9 mb-[40px] relative max-md:mb-[30px] [text-align:-webkit-center]"
+              >
                 <img
                   className="[-webkit-animation:rotation_8s_infinite_linear] max-w-full h-auto"
                   src="/images/demo-digital-agency-about-play-text.webp"
@@ -22,18 +65,39 @@ export default function Section2() {
                     alt=""
                   />
                 </div>
-              </div>
+              </motion.div>
             </Link>
-            <h2 className="tracking-[-2px] [text-shadow:_0_0_60px_rgba(0,0,0,.9)] font-spaceGrotesk text-white max-md:mb-[25px]">
+            <motion.h2
+              ref={bottomTextRef}
+              initial={!isAnimationsPassive && { translateY: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: bottomTextViewArea ? 0 : 15,
+                  opacity: bottomTextViewArea ? 1 : 0,
+                }
+              }
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="tracking-[-2px] [text-shadow:_0_0_60px_rgba(0,0,0,.9)] font-spaceGrotesk text-white max-md:mb-[25px]"
+            >
               Forward thinking team of designers, copywriters and developers.{" "}
-            </h2>
+            </motion.h2>
           </div>
         </div>
       </div>
       <div className="py-[40px] bg-[rgba(35,35,35,.4)] [backdrop-filter:_blur(5px)]">
-        <div className="custom-container">
+        <div ref={bottomPropsContainerRef} className="custom-container">
           <div className="row items-center justify-center">
-            <div className="px-[15px] text-center w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2 max-mdx:mb-[30px]">
+            <motion.div
+              initial={!isAnimationsPassive && { translateX: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateX: bottomPropsContainerViewArea ? 0 : 15,
+                  opacity: bottomPropsContainerViewArea ? 1 : 0,
+                }
+              }
+              transition={{ duration: 0.6, delay: 0 }}
+              className="px-[15px] text-center w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2 max-mdx:mb-[30px]"
+            >
               <div className="flex-row flex-wrap items-center justify-start text-left relative z-1 inline-flex align-middle">
                 <div className="mr-[15px]">
                   <img
@@ -50,8 +114,18 @@ export default function Section2() {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="px-[15px] text-center w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2 max-mdx:mb-[30px]">
+            </motion.div>
+            <motion.div
+              initial={!isAnimationsPassive && { translateX: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateX: bottomPropsContainerViewArea ? 0 : 15,
+                  opacity: bottomPropsContainerViewArea ? 1 : 0,
+                }
+              }
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="px-[15px] text-center w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2 max-mdx:mb-[30px]"
+            >
               <div className="flex-row flex-wrap items-center justify-start text-left relative z-1 inline-flex align-middle">
                 <div className="mr-[15px]">
                   <img
@@ -68,8 +142,18 @@ export default function Section2() {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="px-[15px] text-center w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2 max-xsm:mb-[30px]">
+            </motion.div>
+            <motion.div
+              initial={!isAnimationsPassive && { translateX: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateX: bottomPropsContainerViewArea ? 0 : 15,
+                  opacity: bottomPropsContainerViewArea ? 1 : 0,
+                }
+              }
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="px-[15px] text-center w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2 max-xsm:mb-[30px]"
+            >
               <div className="flex-row flex-wrap items-center justify-start text-left relative z-1 inline-flex align-middle">
                 <div className="mr-[15px]">
                   <svg
@@ -89,8 +173,18 @@ export default function Section2() {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="px-[15px] text-center w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2">
+            </motion.div>
+            <motion.div
+              initial={!isAnimationsPassive && { translateX: 15, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateX: bottomPropsContainerViewArea ? 0 : 15,
+                  opacity: bottomPropsContainerViewArea ? 1 : 0,
+                }
+              }
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="px-[15px] text-center w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2"
+            >
               <div className="flex-row flex-wrap items-center justify-start text-left relative z-1 inline-flex align-middle">
                 <div className="mr-[15px]">
                   <FaRegComments className="flex" size={34} color="#e8e8e8" />
@@ -101,7 +195,7 @@ export default function Section2() {
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
