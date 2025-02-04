@@ -1,7 +1,27 @@
+"use client";
+import { motion, useInView, useSpring } from "motion/react";
 import Link from "next/link";
+import { useRef, useState, useEffect } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 
 export default function Section3() {
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
+    window.innerWidth < 1217
+  );
+
+  const stickyAreaRef = useRef(null);
+  const statsAreaRef = useRef(null);
+
+  const stickyAreViewArea = useInView(stickyAreaRef, {
+    once: true,
+    amount: 0.2,
+  });
+
+  const statsAreaViewArea = useInView(statsAreaRef, {
+    once: true,
+    amount: 0.2,
+  });
+
   return (
     <section className="max-2xl:py-[90px] max-mdx:py-[75px] max-md:py-[50px]">
       <div className="custom-container">
@@ -27,7 +47,16 @@ export default function Section3() {
         </div>
         <div className="row mb-[3%] max-mdx:mb-0">
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full mdx:w-1/3 md:w-[66.66666667%] max-mdx:mb-[50px]">
-            <div className="top-[120px] sticky">
+            <motion.div
+              initial={{ translateY: 30, opacity: 0 }}
+              animate={{
+                translateY: stickyAreViewArea ? 0 : 30,
+                opacity: stickyAreViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0 }}
+              ref={stickyAreaRef}
+              className="top-[120px] sticky"
+            >
               <p className="mb-[40px] w-3/4 mt-0 max-lgx:w-full">
                 {
                   "We combine human empathy and intelligent data to provide the "
@@ -43,11 +72,16 @@ export default function Section3() {
                 {"Let's talk now"}
                 <HiOutlineMail size={18} className="ml-[6px] inline-block" />
               </Link>
-            </div>
+            </motion.div>
           </div>
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full mdx:w-[66.66666667%] md:w-full">
-            <div className="mx-0 flex flex-wrap">
-              <div className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r">
+            <div ref={statsAreaRef} className="mx-0 flex flex-wrap">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: statsAreaViewArea ? 1 : 0 }}
+                transition={{ duration: 0.6 }}
+                className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
+              >
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
                   Users on marketplaces we've created in 2023.
                 </p>
@@ -68,8 +102,13 @@ export default function Section3() {
                   </sup>
                   <span className="w-full h-auto">8500+</span>
                 </h2>
-              </div>
-              <div className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b border-r flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: statsAreaViewArea ? 1 : 0 }}
+                transition={{ duration: 0.6 }}
+                className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b border-r flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
+              >
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
                   Successfully finished projects with creativity.
                 </p>
@@ -90,8 +129,13 @@ export default function Section3() {
                   </sup>
                   <span className="w-full h-auto">660+</span>
                 </h2>
-              </div>
-              <div className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: statsAreaViewArea ? 1 : 0 }}
+                transition={{ duration: 0.6 }}
+                className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
+              >
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
                   Monthly visitors on our e-Commerce platform.
                 </p>
@@ -112,8 +156,13 @@ export default function Section3() {
                   </sup>
                   <span className="w-full h-auto">6834+</span>
                 </h2>
-              </div>
-              <div className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-r border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: statsAreaViewArea ? 1 : 0 }}
+                transition={{ duration: 0.6 }}
+                className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-r border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
+              >
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
                   Onboarding conversions growth increased.
                 </p>
@@ -134,7 +183,7 @@ export default function Section3() {
                   </sup>
                   <span className="w-full h-auto">300%</span>
                 </h2>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
