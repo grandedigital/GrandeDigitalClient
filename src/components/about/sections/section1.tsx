@@ -1,9 +1,23 @@
+"use client";
+import { motion, useInView } from "motion/react";
+import { useRef, useState } from "react";
 import Brands from "@/components/brands";
 import Link from "next/link";
 import { HiOutlineMail } from "react-icons/hi";
 import { PiPhoneCall } from "react-icons/pi";
 
 export default function Section1() {
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
+    window.innerWidth < 1217
+  );
+
+  const contentRef = useRef(null);
+
+  const contentViewArea = useInView(contentRef, {
+    once: true,
+    amount: 0.5,
+  });
+
   return (
     <section className="max-2xl:py-[90px] max-mdx:py-[75px] max-md:py-[50px]">
       <div className="custom-container">
@@ -28,21 +42,56 @@ export default function Section1() {
               </figcaption>
             </figure>
           </div>
-          <div className="px-[15px] text-center w-full max-w-full md:text-left lgx:ml-[8.33333333%] lgx:w-[41.66666667%] lgx:flex-[0_0_auto] mdx:w-1/2">
-            <h2 className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-[30px] max-md:mb-[25px]">
+          <div
+            ref={contentRef}
+            className="px-[15px] text-center w-full max-w-full md:text-left lgx:ml-[8.33333333%] lgx:w-[41.66666667%] lgx:flex-[0_0_auto] mdx:w-1/2"
+          >
+            <motion.h2
+              initial={{ translateY: 30, opacity: 0 }}
+              animate={{
+                translateY: contentViewArea ? 0 : 30,
+                opacity: contentViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0 }}
+              className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-[30px] max-md:mb-[25px]"
+            >
               We're a creative digital agency.
-            </h2>
-            <p className="w-[85%] mb-[25px] mt-0 max-md:w-full">
+            </motion.h2>
+            <motion.p
+              initial={{ translateY: 30, opacity: 0 }}
+              animate={{
+                translateY: contentViewArea ? 0 : 30,
+                opacity: contentViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="w-[85%] mb-[25px] mt-0 max-md:w-full"
+            >
               We are excited for our work and how it positively impacts clients.
               With over 28 years of experience we have been constantly providing
               excellent web solutions is best in-class experience.
-            </p>
-            <p className="w-[85%] mb-[25px] mt-0 max-md:w-full">
+            </motion.p>
+            <motion.p
+              initial={{ translateY: 30, opacity: 0 }}
+              animate={{
+                translateY: contentViewArea ? 0 : 30,
+                opacity: contentViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="w-[85%] mb-[25px] mt-0 max-md:w-full"
+            >
               We are excited for our work and how it positively impacts clients.
               We constantly providing excellent web solutions is best in-class
               experience.
-            </p>
-            <div className="mt-[15px] w-full inline-block max-md:mt-0">
+            </motion.p>
+            <motion.div
+              initial={{ translateY: 30, opacity: 0 }}
+              animate={{
+                translateY: contentViewArea ? 0 : 30,
+                opacity: contentViewArea ? 1 : 0,
+              }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="mt-[15px] w-full inline-block max-md:mt-0"
+            >
               <Link
                 href={"#"}
                 className="bg-[--dark-gray2] text-white text-14 py-[18px] px-[34px] border-2 border-transparent rounded-none uppercase tracking-[.5px] w-auto font-spaceGrotesk transition-all duration-300 ease-in-out [box-shadow:_0_5px_20px_rgba(0,0,0,.1);] font-medium mr-[20px] inline-block align-middle leading-[--bs-btn-line-height] text-center cursor-pointer select-none max-md:text-13 max-md:py-[16px] max-md:px-[36px] max-md:mr-0 max-md:mb-[30px] hover:[transform:translate3d(0,-2px,0)]"
@@ -60,7 +109,7 @@ export default function Section1() {
                 <PiPhoneCall size={24} className="mr-[10px] inline-block" />
                 {"1 800 222 000"}
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
         <Brands toPage="about" />
