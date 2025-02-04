@@ -1,7 +1,7 @@
 "use client";
-import { motion, useInView, useSpring } from "motion/react";
+import { motion, useInView } from "motion/react";
 import Link from "next/link";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 
 export default function Section3() {
