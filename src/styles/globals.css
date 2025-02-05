@@ -14,6 +14,10 @@
     @apply border-b-0 text-center p-0 max-mdx:transition-all max-mdx:duration-500;
   }
 
+  .feaure-box {
+    @apply flex items-center justify-center flex-col text-center relative z-1
+  }
+
   .mobile-nav-link {
     @apply block py-[--bs-nav-link-padding-y] px-[--bs-nav-link-padding-x] no-underline bg-[0_0] border-[0] transition-all duration-150 ease-in-out max-mdx:text-[36px] max-mdx:leading-10 max-mdx:inline-block max-mdx:font-medium max-mdx:px-0 max-mdx:py-[10px] text-white;
   }
