@@ -1,10 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useState, useRef } from "react";
 import { HiOutlineMail } from "react-icons/hi";
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
 
 export default function MapAndForm() {
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
+    window.innerWidth < 1217
+  );
+  const mapAndFormRef = useRef(null);
+  const mapAndFormViewArea = useInView(mapAndFormRef, {
+    once: true,
+    amount: 0.2,
+  });
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -80,9 +91,37 @@ export default function MapAndForm() {
   return (
     <section className="p-0">
       <div className="p-0 w-full mx-auto">
-        <div className="row mx-0">
-          <div className="px-0 w-full max-w-full lgx:flex-[0_0_auto] lgx:w-1/2 bg-blue-300 h-full"></div>
-          <div className="px-0 relative w-full max-w-full xxl:flex-[0_0_auto] xxl:w-1/3 lgx:flex-[0_0_auto] lgx:w-1/2">
+        <div ref={mapAndFormRef} className="row mx-0">
+          <motion.div
+            initial={!isAnimationsPassive && { translateX: -50, opacity: 0 }}
+            animate={
+              !isAnimationsPassive && {
+                translateX: mapAndFormViewArea ? 0 : -50,
+                opacity: mapAndFormViewArea ? 1 : 0,
+              }
+            }
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="px-0 w-full max-w-full lgx:flex-[0_0_auto] lgx:w-1/2 bg-blue-300 bg-[url(/images/map.png)] bg-cover max-lgx:h-[600px] max-md:h-[400px] max-xsm:h-[300px] relative"
+          >
+            <Link
+              className="bg-[--dark-gray2] text-white rounded-[4px] text-13 py-[8px] px-[30px] cursor-pointer border-2 border-transparent uppercase tracking-[.5px] font-spaceGrotesk transition-all duration-300 ease-in-out shadow-[0 5px_20px_rgba(0,0,0,.1)] font-medium inline-block text-center align-middle select-none m-0 leading-[1.5] relative top-[20px] left-[10px]"
+              href={"https://maps.app.goo.gl/jrspCJMckSJ18q3w7"}
+              target="_blank"
+            >
+              Map
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={!isAnimationsPassive && { translateX: -50, opacity: 0 }}
+            animate={
+              !isAnimationsPassive && {
+                translateX: mapAndFormViewArea ? 0 : -50,
+                opacity: mapAndFormViewArea ? 1 : 0,
+              }
+            }
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="px-0 relative w-full max-w-full xxl:flex-[0_0_auto] xxl:w-1/3 lgx:flex-[0_0_auto] lgx:w-1/2"
+          >
             <img
               className="right-[-40%] z-9 transition-all duration-600 ease-[cubic-bezier(.23,1,.32,1)] absolute hidden max-w-full h-auto xxl:block"
               src="/images/contactImg.webp"
@@ -192,7 +231,7 @@ export default function MapAndForm() {
                 </div>
               </form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

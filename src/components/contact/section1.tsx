@@ -29,8 +29,10 @@ export default function Section1() {
         <div className="row mb-[6%] max-mdx:mb-[30px]">
           <div className="px-[15px] w-full flex-[0_0_auto] max-w-full xxl:w-[75%] lgx:w-[83.33333333%]">
             <motion.h2
-              initial={{ opacity: 0 }}
-              animate={{ opacity: h2TextViewArea ? 1 : 0 }}
+              initial={!isAnimationsPassive && { opacity: 0 }}
+              animate={
+                !isAnimationsPassive && { opacity: h2TextViewArea ? 1 : 0 }
+              }
               transition={{ duration: 0.3 }}
               ref={h2TextRef}
               className="font-semibold w-[95%] tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk text-center mb-0 mdx:text-left max-mdx:w-full"
@@ -41,11 +43,13 @@ export default function Section1() {
         </div>
         <div ref={itemsRef} className="row justify-center">
           <motion.div
-            initial={{ translateY: 30, opacity: 0 }}
-            animate={{
-              translateY: itemsViewArea ? 0 : 30,
-              opacity: itemsViewArea ? 1 : 0,
-            }}
+            initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+            animate={
+              !isAnimationsPassive && {
+                translateY: itemsViewArea ? 0 : 30,
+                opacity: itemsViewArea ? 1 : 0,
+              }
+            }
             transition={{ duration: 0.6, delay: 0 }}
             className="px-[15px] w-full flex-[0_0_auto] max-w-full xsm:w-1/2 mdx:w-1/4 max-mdx:mb-[50px] max-md:mb-[30px]"
           >
@@ -68,11 +72,13 @@ export default function Section1() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ translateY: 30, opacity: 0 }}
-            animate={{
-              translateY: itemsViewArea ? 0 : 30,
-              opacity: itemsViewArea ? 1 : 0,
-            }}
+            initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+            animate={
+              !isAnimationsPassive && {
+                translateY: itemsViewArea ? 0 : 30,
+                opacity: itemsViewArea ? 1 : 0,
+              }
+            }
             transition={{ duration: 0.6, delay: 0.3 }}
             className="px-[15px] w-full flex-[0_0_auto] max-w-full xsm:w-1/2 mdx:w-1/4 max-mdx:mb-[50px] max-md:mb-[30px]"
           >
@@ -107,11 +113,13 @@ export default function Section1() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ translateY: 30, opacity: 0 }}
-            animate={{
-              translateY: itemsViewArea ? 0 : 30,
-              opacity: itemsViewArea ? 1 : 0,
-            }}
+            initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+            animate={
+              !isAnimationsPassive && {
+                translateY: itemsViewArea ? 0 : 30,
+                opacity: itemsViewArea ? 1 : 0,
+              }
+            }
             transition={{ duration: 0.6, delay: 0.6 }}
             className="px-[15px] w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2 max-xsm:mb-[30px]"
           >
@@ -143,11 +151,13 @@ export default function Section1() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ translateY: 30, opacity: 0 }}
-            animate={{
-              translateY: itemsViewArea ? 0 : 30,
-              opacity: itemsViewArea ? 1 : 0,
-            }}
+            initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+            animate={
+              !isAnimationsPassive && {
+                translateY: itemsViewArea ? 0 : 30,
+                opacity: itemsViewArea ? 1 : 0,
+              }
+            }
             transition={{ duration: 0.6, delay: 0.9 }}
             className="px-[15px] w-full flex-[0_0_auto] max-w-full mdx:w-1/4 xsm:w-1/2"
           >
