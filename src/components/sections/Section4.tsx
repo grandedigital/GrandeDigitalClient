@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 
 export default function Section4({
-  longText = "Forward thinking team of designers, copywriters and developers.",
+  longText = "Son teknoloji yazılım dilleri, veritabanı yapıları ve sunucularla güçlü dijital çözümler sunuyoruz.",
 }) {
   const [isAnimationsPassive, setIsAnimationsPassive] = useState(
     window.innerWidth < 1217
@@ -79,8 +79,7 @@ export default function Section4({
               />
             </Link>
             <div className="font-medium mt-[30px] pt-[15px] border-[--dark-gray2] text-14 text-white uppercase border-t border-solid">
-              3x site of the day
-            </div>
+Buralara dillerin logoları gelecek            </div>
           </motion.div>
           <motion.div
             initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}

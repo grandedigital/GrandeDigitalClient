@@ -115,12 +115,12 @@ export default function Section1() {
         <div className="row mb-[6%] items-center max-md:mb-[50px]">
           <div className="px-[15px] text-center max-w-full md:text-left lgx:flex-[0_0_auto] lgx:w-[41.66666667%] mdx:flex-[0_0_auto] mdx:w-[41.66666667%] max-mdx:mb-[50px] max-md:mb-[30px]">
             <h2 className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-0">
-              {"We are a creative bold digital agency based in "}
+              
               <span
                 ref={strongTextImgRef}
                 className="shadow-none inline-block relative pb-0 mb-0"
               >
-                london.
+                İstanbul
                 <span className="h-[45px] bottom-[-10px] -z-1 float-left w-full absolute left-0">
                   <motion.img
                     initial={!isAnimationsPassive && { width: "0%" }}
@@ -136,6 +136,7 @@ export default function Section1() {
                   />
                 </span>
               </span>
+              {" ve Fethiye ofislerimizle, yaratıcı ve güçlü çözümler sunuyoruz."}
             </h2>
           </div>
           <div
@@ -179,7 +180,7 @@ export default function Section1() {
                   className="[background-image:linear-gradient(135deg,transparent_45%,#464646_45%,#464646_55%,transparent_0)] [background-size:_5px_5px] w-[250px] h-[250px] bg-[--dark-gray2] rounded-[50%] items-center justify-center flex"
                 >
                   <span className="font-bold w-full tracking-[-4px] text-[6.875rem] leading-[6.875rem] font-spaceGrotesk text-white justify-center flex">
-                    {"20 "}
+                    {"16 "}
                     <sub className="font-medium top-0 text-[2.5rem] leading-[2.5rem] relative align-top bottom-[-0.25em]">
                       +
                     </sub>
@@ -200,7 +201,7 @@ export default function Section1() {
                   }
                   className="font-bold mb-[5px] tracking-[0.5px] text-[--dark-gray2] text-[16px] uppercase block"
                 >
-                  20+ years of experience
+                  16+ YILI AŞKIN TECRÜBE
                 </motion.span>
                 <motion.p
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -215,8 +216,7 @@ export default function Section1() {
                   }
                   className="mb-0 leading-[2rem] text-[18px] mt-0"
                 >
-                  We are dedicated to providing outstanding digital and design
-                  services meet the functional and aesthetic.
+                  Projelerimizde, her bir yazılım çözümünü işlevsellik ile güçlendirirken, tasarımlarımızda estetiği ön planda tutarak, kullanıcı dostu ve görsel olarak etkileyici dijital deneyimler oluşturuyoruz.
                 </motion.p>
               </div>
             </div>

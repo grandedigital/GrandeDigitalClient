@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/bundle";
 import { useEffect, useRef, useState } from "react";
 
-export default function Hero({ verticalText = "award winning agency" }) {
+export default function Hero({ verticalText = "HER ADIMDA KALİTE" }) {
   const [isAnimationsPassive, setIsAnimationsPassive] = useState(
     window.innerWidth < 1217
   );
@@ -89,7 +89,7 @@ export default function Hero({ verticalText = "award winning agency" }) {
             >
               <div className="z-9 relative inline-block">
                 <div className="shadow-none inline-block relative pb-5 mb-0">
-                  Digital
+                  Dijitali &nbsp;
                   <span className="h-full -z-1 float-left w-full absolute left-0 bottom-0">
                     <motion.img
                       initial={!isAnimationsPassive && { width: "0%" }}
@@ -105,7 +105,7 @@ export default function Hero({ verticalText = "award winning agency" }) {
                     />
                   </span>
                 </div>
-                agency
+                hisset
               </div>
             </motion.div>
             <motion.div
@@ -121,8 +121,7 @@ export default function Hero({ verticalText = "award winning agency" }) {
               className="mb-5 w-[70%] text-[--dark-gray2] text-[20px] block max-2xl:w-full max-lgx:w-full max-md:text-[18px] max-md:w-[90%]"
             >
               <span className="opacity-80 inline-block text-[--dark-gray2] text-[20px] max-md:text-[18px] tracking-[0.7px]">
-                We create world-class digital products materials that
-                communicate clearly.
+              Sıradan olana veda et, dijital dünyada iz bırak.
               </span>
             </motion.div>
             <motion.div
@@ -145,7 +144,7 @@ export default function Hero({ verticalText = "award winning agency" }) {
                     href={"#"}
                     className="font-semibold tracking-[-0.5px] text-[--dark-gray2] text-[20px] font-spaceGrotesk inline-block"
                   >
-                    Discover crafto
+                    Keşfet
                   </Link>
                 </div>
               </div>
@@ -187,7 +186,7 @@ export default function Hero({ verticalText = "award winning agency" }) {
               </div>
               <div className="mt-[60px] max-lgx:rotate-0">
                 <h4 className="font-semibold bg-cover bg-center relative bg-no-repeat overflow-hidden image-mask tracking-[-2px] text-[--dark-gray2] leading-[2.5rem] font-spaceGrotesk mb-0 text-[2.375rem] bg-[url('/images/demo-digital-agency-text-img.jpg')]">
-                  World-class digital media agency.
+                Dijitalleşen dünyada neredesiniz?
                 </h4>
               </div>
             </div>

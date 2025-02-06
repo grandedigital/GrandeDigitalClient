@@ -14,7 +14,7 @@ export default function Home() {
       <Brands />
       <Section1 />
       <Section2 />
-      <Gallery title="Case studies" />
+      <Gallery title="Neler Yaptık" />
       <Section3 />
       <Section4 />
       <Posts />

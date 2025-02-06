@@ -38,7 +38,7 @@ export default function Posts() {
             className="px-[15px] text-center w-full max-w-full md:text-left md:flex-[0_0_auto] md:w-1/2 max-md:mb-[20px]"
           >
             <h2 className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-0">
-              Our journal
+              Bloglarımız
             </h2>
           </motion.div>
           <motion.div

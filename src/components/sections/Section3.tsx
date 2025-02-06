@@ -29,10 +29,10 @@ export default function Section3() {
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full xxl:w-3/4 lgx:w-[83.33333333%]">
             <h2 className="font-semibold w-[95%] tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-[30px] max-mdx:w-full max-md:mb-[25px]">
               {
-                "Intuition and strategy integrate the research methodology that we also apply to "
+                "Sezgi ve strateji, geleneksel medya alanındaki çalışmalarımıza entegre ettiğimiz kapsamlı araştırma metodolojisiyle uyumlu bir şekilde "
               }
               <span className="shadow-none inline-block relative pb-0 mb-0">
-                traditional
+              bütünleşir.
                 <span className="h-[45px] bottom-[-10px] -z-1 float-left w-full absolute left-0">
                   <img
                     src="/images/demo-digital-agency-highlight-separator.webp"
@@ -41,7 +41,7 @@ export default function Section3() {
                   />
                 </span>
               </span>
-              {" media."}
+              
             </h2>
           </div>
         </div>
@@ -61,17 +61,18 @@ export default function Section3() {
             >
               <p className="mb-[40px] w-3/4 mt-0 max-lgx:w-full">
                 {
-                  "We combine human empathy and intelligent data to provide the "
+                  "En yüksek memnuniyet düzeyini sağlamak amacıyla, insan empatisi ile "
                 }
                 <span className="font-semibold border-b border-solid text-[--dark-gray2] border-[--dark-gray2]">
-                  highest level of satisfaction.
+                yapay zeka
                 </span>
+                {" verilerini stratejik bir şekilde birleştiriyoruz."}
               </p>
               <Link
                 href={"#"}
                 className="bg-[--dark-gray2] text-white text-[14px] py-[18px] px-[34px] border-2 border-solid border-transparent rounded-none uppercase tracking-[.5px] w-auto font-spaceGrotesk transition-all duration-300 ease-in-out [box-shadow:0_5px_20px_rgba(0,0,0,.1)] font-medium inline-block max-md:text-[13px] max-md:py-[16px] max-md:px-[36px]"
               >
-                {"Let's talk now"}
+                {"HEMEN BAŞLA"}
                 <HiOutlineMail size={18} className="ml-[6px] inline-block" />
               </Link>
             </motion.div>
