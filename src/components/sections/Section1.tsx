@@ -1,12 +1,27 @@
 "use client";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { mapValue } from "@/utils/global";
 
 export default function Section1() {
   const strongTextImgRef = useRef(null);
   const circleRef = useRef(null);
   const bottomPropRef = useRef(null);
+  const onlyNumberAndPlusContainerRef = useRef(null);
+
+  const [numberAndPlusBoundingClientRect, setNumberAndPlusBoundingClientRect] =
+    useState(null);
+
+  const [numberAndPlusTranslateXValue, setNumberAndPlusTranslateXValue] =
+    useState(0);
+  const [numberAndPlusTranslateYValue, setNumberAndPlusTranslateYValue] =
+    useState(0);
+  const [numberAndPlusRotateXValue, setNumberAndPlusRotateXValue] = useState(0);
+  const [numberAndPlusRotateYValue, setNumberAndPlusRotateYValue] = useState(0);
+
+  const [numberAndPlusAnimationCompleted, setNumberAndPlusAnimationCompleted] =
+    useState(false);
 
   const [isAnimationsPassive, setIsAnimationsPassive] = useState(
     window.innerWidth < 1217
@@ -26,6 +41,73 @@ export default function Section1() {
     once: true,
     amount: 0.2,
   });
+
+  const handleMouseMove = (event) => {
+    if (!numberAndPlusAnimationCompleted) {
+      return;
+    }
+    const { left, top } = event.currentTarget.getBoundingClientRect();
+    const mouseX = event.clientX - left;
+    const mouseY = event.clientY - top;
+
+    setNumberAndPlusTranslateXValue(
+      mapValue(
+        Math.abs(mouseX),
+        0,
+        numberAndPlusBoundingClientRect.width,
+        25,
+        -25
+      )
+    );
+    setNumberAndPlusTranslateYValue(
+      mapValue(
+        Math.abs(mouseY),
+        0,
+        numberAndPlusBoundingClientRect.height,
+        25,
+        -25
+      )
+    );
+
+    setNumberAndPlusRotateXValue(
+      mapValue(
+        Math.abs(mouseY),
+        0,
+        numberAndPlusBoundingClientRect.height,
+        15,
+        -15
+      )
+    );
+    setNumberAndPlusRotateYValue(
+      mapValue(
+        Math.abs(mouseX),
+        0,
+        numberAndPlusBoundingClientRect.width,
+        -15,
+        15
+      )
+    );
+  };
+
+  const handleMouseLeave = () => {
+    setNumberAndPlusTranslateXValue(0);
+    setNumberAndPlusTranslateYValue(0);
+    setNumberAndPlusRotateXValue(0);
+    setNumberAndPlusRotateYValue(0);
+  };
+
+  const handleCompletedCircleAnimation = () => {
+    if (!numberAndPlusAnimationCompleted) {
+      console.log("asdf");
+      setNumberAndPlusAnimationCompleted(true);
+    }
+  };
+
+  useEffect(() => {
+    setNumberAndPlusBoundingClientRect(
+      onlyNumberAndPlusContainerRef.current.getBoundingClientRect()
+    );
+  }, []);
 
   return (
     <section className="overflow-hidden max-2xl:py-[90px] max-mdx:py-[75px] max-md:py-[50px]">
@@ -61,16 +143,39 @@ export default function Section1() {
             className="px-[15px] max-w-full lgx:ml-[8.33333333%] lgx:flex-[0_0_auto] lgx:w-1/2 mdx:flex-[0_0_auto] mdx:w-[58.33333333%] w-full"
           >
             <div className="row items-center max-md:flex-col">
-              <div className="px-[15px] block text-center relative max-w-full mdx:text-center md:text-left lgx:flex-[0_0_auto] lgx:w-1/2 mdx:flex-[0_0_auto] mdx:w-1/2 md:flex-[0_0_auto] md:w-[41.66666667%] max-md:mb-[30px]">
+              <div
+                ref={onlyNumberAndPlusContainerRef}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                className="px-[15px] block text-center relative max-w-full mdx:text-center md:text-left lgx:flex-[0_0_auto] lgx:w-1/2 mdx:flex-[0_0_auto] mdx:w-1/2 md:flex-[0_0_auto] md:w-[41.66666667%] max-md:mb-[30px]"
+              >
                 <motion.span
                   initial={!isAnimationsPassive && { scale: 1.1, opacity: 0 }}
                   animate={
                     !isAnimationsPassive && {
                       scale: circleViewArea ? 1 : 1.1,
                       opacity: circleViewArea ? 1 : 0,
+                      translateX: numberAndPlusAnimationCompleted
+                        ? numberAndPlusTranslateXValue
+                        : 0,
+                      translateY: numberAndPlusAnimationCompleted
+                        ? numberAndPlusTranslateYValue
+                        : 0,
+                      rotateX: numberAndPlusAnimationCompleted
+                        ? numberAndPlusRotateXValue
+                        : 0,
+                      rotateY: numberAndPlusAnimationCompleted
+                        ? numberAndPlusRotateYValue
+                        : 0,
                     }
                   }
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  onAnimationComplete={() => {
+                    circleViewArea && handleCompletedCircleAnimation();
+                  }}
+                  transition={{
+                    duration: numberAndPlusAnimationCompleted ? 0.3 : 0.5,
+                    delay: numberAndPlusAnimationCompleted ? 0 : 0.2,
+                  }}
                   className="[background-image:linear-gradient(135deg,transparent_45%,#464646_45%,#464646_55%,transparent_0)] [background-size:_5px_5px] w-[250px] h-[250px] bg-[--dark-gray2] rounded-[50%] items-center justify-center flex"
                 >
                   <span className="font-bold w-full tracking-[-4px] text-[6.875rem] leading-[6.875rem] font-spaceGrotesk text-white justify-center flex">

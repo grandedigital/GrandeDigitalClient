@@ -32,4 +32,13 @@ function scrollToTop(duration: number): void {
     requestAnimationFrame(animation);
 }
 
-export { scrollToTop };
+//normalize fonksiyonu
+function mapValue(value: number, min: number, max: number, rangeMin: number, rangeMax: number) {
+    if (value < min || value > max) {
+        throw new Error("Değer belirtilen min-max aralığında olmalıdır.");
+    }
+
+    return rangeMin + ((value - min) / (max - min)) * (rangeMax - rangeMin);
+}
+
+export { scrollToTop, mapValue };

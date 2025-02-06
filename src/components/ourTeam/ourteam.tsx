@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { mapValue } from "@/utils/global";
 
 export default function OurTeam() {
   const [scrollY, setScrollY] = useState(0);
@@ -11,15 +12,6 @@ export default function OurTeam() {
   const [sidePhotosScale, setSidePhotesScale] = useState(1);
   const [centerPhotoScale, setCenterPhotoScale] = useState(1);
   const [sidePhotosTranslateY, setSidePhotosTranslateY] = useState(-30);
-
-  //normalize fonksiyonu
-  function mapValue(value, min, max, rangeMin, rangeMax) {
-    if (value < min || value > max) {
-      throw new Error("Değer belirtilen min-max aralığında olmalıdır.");
-    }
-
-    return rangeMin + ((value - min) / (max - min)) * (rangeMax - rangeMin);
-  }
 
   useEffect(() => {
     const handleScroll = () => {
