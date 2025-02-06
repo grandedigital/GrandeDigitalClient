@@ -23,9 +23,14 @@ export default function MobilMenu() {
                   key={index}
                   className={`mobile-nav-item ${
                     isMenuOpen
-                      ? `max-mdx:delay-[${item.activeDelay}ms] max-mdx:opacity-100 max-mdx:scale-100 max-mdx:translate-y-0`
-                      : `max-mdx:delay-[${item.normalDelay}ms] max-mdx:opacity-0 max-mdx:scale-[1.15] max-mdx:translate-y-[-30px]`
+                      ? `max-mdx:opacity-100 max-mdx:scale-100 max-mdx:translate-y-0`
+                      : `max-mdx:opacity-0 max-mdx:scale-[1.15] max-mdx:translate-y-[-30px]`
                   }`}
+                  style={{
+                    transitionDelay: isMenuOpen
+                      ? `${item.activeDelay}ms`
+                      : `${item.normalDelay}ms`,
+                  }}
                 >
                   <Link
                     href={item.href}
