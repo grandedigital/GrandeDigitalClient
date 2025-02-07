@@ -181,7 +181,11 @@ export default function Hero({ verticalText }: { verticalText: string }) {
                     onAnimationComplete={() =>
                       isInViewArea5 && SetSliderMiniAnimationComplated(true)
                     }
-                    transition={{ duration: 1, ease: [0.21, 0.43, 1, 0.41] }}
+                    transition={{
+                      duration: 1,
+                      ease: [0.21, 0.43, 1, 0.41],
+                      delay: 0.2,
+                    }}
                     className="h-full bg-[rgb(246,214,63)] w-[150%] absolute left-0 top-0"
                   ></motion.div>
                 )}
