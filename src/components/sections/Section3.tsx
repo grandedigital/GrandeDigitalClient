@@ -3,6 +3,7 @@ import { motion, useInView } from "motion/react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
+import SlotCounter from "react-slot-counter";
 
 export default function Section3() {
   const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
@@ -91,23 +92,34 @@ export default function Section3() {
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
                   Users on marketplaces we've created in 2023.
                 </p>
-                <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
-                  <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="28"
-                      fill="var(--dark-gray2)"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
-                      />
-                    </svg>
-                  </sup>
-                  <span className="w-full h-auto">8500+</span>
-                </h2>
+                {statsAreaViewArea && (
+                  <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
+                    <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="28"
+                        fill="var(--dark-gray2)"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
+                        />
+                      </svg>
+                    </sup>
+                    <span className="w-full h-auto">
+                      {
+                        <SlotCounter
+                          value={8500}
+                          duration={1.5}
+                          startValue={"0000"}
+                        />
+                      }
+                      +
+                    </span>
+                  </h2>
+                )}
               </motion.div>
               <motion.div
                 initial={!isAnimationsPassive && { opacity: 0 }}
@@ -120,23 +132,34 @@ export default function Section3() {
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
                   Successfully finished projects with creativity.
                 </p>
-                <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
-                  <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="28"
-                      fill="var(--dark-gray2)"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
-                      />
-                    </svg>
-                  </sup>
-                  <span className="w-full h-auto">660+</span>
-                </h2>
+                {statsAreaViewArea && (
+                  <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
+                    <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="28"
+                        fill="var(--dark-gray2)"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
+                        />
+                      </svg>
+                    </sup>
+                    <span className="w-full h-auto">
+                      {
+                        <SlotCounter
+                          value={660}
+                          duration={1.5}
+                          startValue={"000"}
+                        />
+                      }
+                      +
+                    </span>
+                  </h2>
+                )}
               </motion.div>
               <motion.div
                 initial={!isAnimationsPassive && { opacity: 0 }}
@@ -149,23 +172,34 @@ export default function Section3() {
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
                   Monthly visitors on our e-Commerce platform.
                 </p>
-                <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
-                  <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="28"
-                      fill="var(--dark-gray2)"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
-                      />
-                    </svg>
-                  </sup>
-                  <span className="w-full h-auto">6834+</span>
-                </h2>
+                {statsAreaViewArea && (
+                  <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
+                    <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="28"
+                        fill="var(--dark-gray2)"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
+                        />
+                      </svg>
+                    </sup>
+                    <span className="w-full h-auto">
+                      {
+                        <SlotCounter
+                          value={6834}
+                          duration={1.5}
+                          startValue={"0000"}
+                        />
+                      }
+                      +
+                    </span>
+                  </h2>
+                )}
               </motion.div>
               <motion.div
                 initial={!isAnimationsPassive && { opacity: 0 }}
@@ -178,23 +212,34 @@ export default function Section3() {
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
                   Onboarding conversions growth increased.
                 </p>
-                <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
-                  <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="28"
-                      fill="var(--dark-gray2)"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
-                      />
-                    </svg>
-                  </sup>
-                  <span className="w-full h-auto">300%</span>
-                </h2>
+                {statsAreaViewArea && (
+                  <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
+                    <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="28"
+                        fill="var(--dark-gray2)"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
+                        />
+                      </svg>
+                    </sup>
+                    <span className="w-full h-auto">
+                      {
+                        <SlotCounter
+                          value={300}
+                          duration={1.5}
+                          startValue={"000"}
+                        />
+                      }
+                      +
+                    </span>
+                  </h2>
+                )}
               </motion.div>
             </div>
           </div>
