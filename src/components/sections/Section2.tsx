@@ -1,15 +1,13 @@
 "use client";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function Section2({
   longText = "İyi bir ekip, harika işler demek. Biz de size en iyisini sunmak için buradayız.",
 }) {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const longTextRef = useRef(null);
   const titlesRef = useRef(null);
@@ -29,6 +27,10 @@ export default function Section2({
     once: true,
     amount: 0.2,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="py-[130px] bg-[--nero-gray] max-2xl:py-[120px] max-mdx:py-[95px] max-md:py-[50px]">
@@ -72,10 +74,12 @@ export default function Section2({
           >
             <motion.div
               initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
-              animate={!isAnimationsPassive && {
-                translateY: titlesViewArea ? 0 : 30,
-                opacity: titlesViewArea ? 1 : 0,
-              }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: titlesViewArea ? 0 : 30,
+                  opacity: titlesViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0 }}
               className="mx-0 py-[40px] border-[--dark-gray2] border-b border-t items-center relative flex flex-wrap"
             >
@@ -100,21 +104,25 @@ export default function Section2({
                   <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.52 6.52 0 0 0 1.814 9H2.5q.186 0 .358.043a5.52 5.52 0 0 1 3.185-3.185A1.5 1.5 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.52 6.52 0 0 1 2.72 3.5H13.5q-.185 0-.358.043a5.52 5.52 0 0 0-3.185-3.185" />
                 </svg>
                 <span className="font-medium text-white text-[1.875rem] leading-[2.8rem] font-spaceGrotesk">
-                Web Tasarımı ve Geliştirme
+                  Web Tasarımı ve Geliştirme
                 </span>
               </div>
               <div className="px-0 max-w-full md:flex-[0_0_auto] md:w-[41.66666667%]">
                 <p className="my-0 tracking-[.6px]">
-                Küçük ölçekli girişimlerden büyük çaplı projelere kadar, her tür ihtiyaç için özel web çözümleri sunuyor ve gerçek dünyada uygulanabilir, etkili web tasarımları geliştiriyoruz.
+                  Küçük ölçekli girişimlerden büyük çaplı projelere kadar, her
+                  tür ihtiyaç için özel web çözümleri sunuyor ve gerçek dünyada
+                  uygulanabilir, etkili web tasarımları geliştiriyoruz.
                 </p>
               </div>
             </motion.div>
             <motion.div
               initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
-              animate={!isAnimationsPassive && {
-                translateY: titlesViewArea ? 0 : 30,
-                opacity: titlesViewArea ? 1 : 0,
-              }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: titlesViewArea ? 0 : 30,
+                  opacity: titlesViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap"
             >
@@ -135,7 +143,7 @@ export default function Section2({
                   <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
                 </svg>
                 <span className="font-medium text-white text-[1.875rem] leading-[2.8rem] font-spaceGrotesk mr-[15px]">
-                Yazılım Geliştirme
+                  Yazılım Geliştirme
                 </span>
                 <span className="font-bold px-[15px] rounded-full bg-[--yellow] text-[--dark-gray2] leading-[28px] text-[12px] uppercase max-mdx:my-[10px]">
                   Popular
@@ -143,16 +151,21 @@ export default function Section2({
               </div>
               <div className="px-0 max-w-full md:flex-[0_0_auto] md:w-[41.66666667%]">
                 <p className="my-0 tracking-[.6px]">
-                Her ölçekteki projeye özel, yüksek verimli ve ölçeklenebilir yazılım çözümleri geliştirmek için çalışıyor, iş süreçlerini dijital dünyada güçlendiren özelleştirilmiş yazılımlar sunuyoruz.
+                  Her ölçekteki projeye özel, yüksek verimli ve ölçeklenebilir
+                  yazılım çözümleri geliştirmek için çalışıyor, iş süreçlerini
+                  dijital dünyada güçlendiren özelleştirilmiş yazılımlar
+                  sunuyoruz.
                 </p>
               </div>
             </motion.div>
             <motion.div
               initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
-              animate={!isAnimationsPassive && {
-                translateY: titlesViewArea ? 0 : 30,
-                opacity: titlesViewArea ? 1 : 0,
-              }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: titlesViewArea ? 0 : 30,
+                  opacity: titlesViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0.6 }}
               className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap"
             >
@@ -180,16 +193,20 @@ export default function Section2({
               </div>
               <div className="px-0 max-w-full md:flex-[0_0_auto] md:w-[41.66666667%]">
                 <p className="my-0 tracking-[.6px]">
-                Farklı platformlarda çalışabilen, kullanıcı dostu ve yüksek performanslı mobil uygulamalar geliştirmek için çaba harcıyor, her ihtiyaca yönelik yenilikçi mobil çözümler sunuyoruz.
+                  Farklı platformlarda çalışabilen, kullanıcı dostu ve yüksek
+                  performanslı mobil uygulamalar geliştirmek için çaba harcıyor,
+                  her ihtiyaca yönelik yenilikçi mobil çözümler sunuyoruz.
                 </p>
               </div>
             </motion.div>
             <motion.div
               initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
-              animate={!isAnimationsPassive && {
-                translateY: titlesViewArea ? 0 : 30,
-                opacity: titlesViewArea ? 1 : 0,
-              }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: titlesViewArea ? 0 : 30,
+                  opacity: titlesViewArea ? 1 : 0,
+                }
+              }
               transition={{ duration: 0.6, delay: 0.9 }}
               className="mx-0 py-[40px] border-[--dark-gray2] border-b items-center relative flex flex-wrap"
             >
@@ -210,12 +227,15 @@ export default function Section2({
                   <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
                 </svg>
                 <span className="font-medium text-white text-[1.875rem] leading-[2.8rem] font-spaceGrotesk">
-                Danışmanlık Hizmetleri
+                  Danışmanlık Hizmetleri
                 </span>
               </div>
               <div className="px-0 max-w-full md:flex-[0_0_auto] md:w-[41.66666667%]">
                 <p className="my-0 tracking-[.6px]">
-                Dijital dünyada başarıya ulaşmanız için stratejik rehberlik sunuyor, iş süreçlerinizi optimize etmek ve dijital dönüşüm yolculuğunuzu hızlandırmak adına özelleştirilmiş danışmanlık hizmetleri sağlıyoruz.
+                  Dijital dünyada başarıya ulaşmanız için stratejik rehberlik
+                  sunuyor, iş süreçlerinizi optimize etmek ve dijital dönüşüm
+                  yolculuğunuzu hızlandırmak adına özelleştirilmiş danışmanlık
+                  hizmetleri sağlıyoruz.
                 </p>
               </div>
             </motion.div>
@@ -229,10 +249,12 @@ export default function Section2({
             <motion.div
               transition={{ duration: 0.6 }}
               initial={!isAnimationsPassive && { translateY: 30, opacity: 1 }}
-              animate={!isAnimationsPassive && {
-                translateY: titleBottomTextViewArea ? 0 : 30,
-                opacity: titleBottomTextViewArea ? 1 : 0,
-              }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: titleBottomTextViewArea ? 0 : 30,
+                  opacity: titleBottomTextViewArea ? 1 : 0,
+                }
+              }
               className="text-white text-20 tracking-[.7px]"
             >
               {

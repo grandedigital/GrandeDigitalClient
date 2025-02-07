@@ -20,10 +20,10 @@ export default function Page() {
   );
 }
 
-export async function generateStaticParams() {
-  const portfolioItems = [{ slug: "detail1" }];
+// export async function generateStaticParams() {
+//   const portfolioItems = [{ slug: "detail1" }];
 
-  return portfolioItems.map((item) => ({
-    slug: item.slug,
-  }));
-}
+//   return portfolioItems.map((item) => ({
+//     slug: item.slug,
+//   }));
+// }

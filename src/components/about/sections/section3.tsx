@@ -1,11 +1,9 @@
 "use client";
 import { motion, useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Section3() {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const areaRef = useRef(null);
 
@@ -13,6 +11,10 @@ export default function Section3() {
     once: true,
     amount: 0.1,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="pb-0 max-2xl:pt-[90px] max-mdx:pt-[75px] max-md:pt-[70px]">

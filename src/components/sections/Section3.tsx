@@ -1,13 +1,11 @@
 "use client";
 import { motion, useInView } from "motion/react";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 
 export default function Section3() {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const stickyAreaRef = useRef(null);
   const statsAreaRef = useRef(null);
@@ -22,6 +20,10 @@ export default function Section3() {
     amount: 0.2,
   });
 
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
+
   return (
     <section className="max-2xl:py-[90px] max-mdx:py-[75px] max-md:py-[50px]">
       <div className="custom-container">
@@ -32,7 +34,7 @@ export default function Section3() {
                 "Sezgi ve strateji, geleneksel medya alanındaki çalışmalarımıza entegre ettiğimiz kapsamlı araştırma metodolojisiyle uyumlu bir şekilde "
               }
               <span className="shadow-none inline-block relative pb-0 mb-0">
-              bütünleşir.
+                bütünleşir.
                 <span className="h-[45px] bottom-[-10px] -z-1 float-left w-full absolute left-0">
                   <img
                     src="/images/demo-digital-agency-highlight-separator.webp"
@@ -41,7 +43,6 @@ export default function Section3() {
                   />
                 </span>
               </span>
-              
             </h2>
           </div>
         </div>
@@ -64,7 +65,7 @@ export default function Section3() {
                   "En yüksek memnuniyet düzeyini sağlamak amacıyla, insan empatisi ile "
                 }
                 <span className="font-semibold border-b border-solid text-[--dark-gray2] border-[--dark-gray2]">
-                yapay zeka
+                  yapay zeka
                 </span>
                 {" verilerini stratejik bir şekilde birleştiriyoruz."}
               </p>

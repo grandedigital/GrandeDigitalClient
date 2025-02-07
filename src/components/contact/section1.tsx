@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 
@@ -9,9 +9,7 @@ export default function Section1() {
   const h2TextRef = useRef(null);
   const itemsRef = useRef(null);
 
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const h2TextViewArea = useInView(h2TextRef, {
     once: true,
@@ -22,6 +20,10 @@ export default function Section1() {
     once: true,
     amount: 0.2,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="max-2xl:py-[90px] max-mdx:py-[75px] max-md:py-[50px]">

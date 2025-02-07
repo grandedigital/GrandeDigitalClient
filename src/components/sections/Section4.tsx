@@ -1,15 +1,13 @@
 "use client";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function Section4({
   longText = "Son teknoloji yazılım dilleri, veritabanı yapıları ve sunucularla güçlü dijital çözümler sunuyoruz.",
 }) {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const longTextRef = useRef(null);
   const bottomPropsRef = useRef(null);
@@ -23,6 +21,10 @@ export default function Section4({
     once: true,
     amount: 0.2,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="py-[130px] bg-[url('/images/demo-digital-agency-bg-01.jpg')] relative overflow-hidden bg-fixed bg-cover max-2xl:py-[120px] max-lgx:bg-inherit max-lgx:bg-center max-mdx:py-[95px] max-md:py-[50px]">
@@ -79,7 +81,8 @@ export default function Section4({
               />
             </Link>
             <div className="font-medium mt-[30px] pt-[15px] border-[--dark-gray2] text-14 text-white uppercase border-t border-solid">
-Buralara dillerin logoları gelecek            </div>
+              Buralara dillerin logoları gelecek{" "}
+            </div>
           </motion.div>
           <motion.div
             initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}

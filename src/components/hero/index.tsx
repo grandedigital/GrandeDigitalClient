@@ -11,10 +11,8 @@ import "swiper/css";
 import "swiper/css/bundle";
 import { useEffect, useRef, useState } from "react";
 
-export default function Hero({ verticalText = "HER ADIMDA KALİTE" }) {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+export default function Hero({ verticalText }: { verticalText: string }) {
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const area1Ref = useRef(null);
   const area2Ref = useRef(null);
@@ -30,6 +28,10 @@ export default function Hero({ verticalText = "HER ADIMDA KALİTE" }) {
   const [area1AnimationComplated, setArea1AnimationCompleted] = useState(false);
   const [sliderMiniAnimationComplated, SetSliderMiniAnimationComplated] =
     useState(false);
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="mt-[inherit] h-[919px] max-mdx:mt-[83px] max-mdx:h-[836px] max-md:h-auto p-0 relative overflow-hidden">
@@ -121,7 +123,7 @@ export default function Hero({ verticalText = "HER ADIMDA KALİTE" }) {
               className="mb-5 w-[70%] text-[--dark-gray2] text-[20px] block max-2xl:w-full max-lgx:w-full max-md:text-[18px] max-md:w-[90%]"
             >
               <span className="opacity-80 inline-block text-[--dark-gray2] text-[20px] max-md:text-[18px] tracking-[0.7px]">
-              Sıradan olana veda et, dijital dünyada iz bırak.
+                Sıradan olana veda et, dijital dünyada iz bırak.
               </span>
             </motion.div>
             <motion.div
@@ -186,7 +188,7 @@ export default function Hero({ verticalText = "HER ADIMDA KALİTE" }) {
               </div>
               <div className="mt-[60px] max-lgx:rotate-0">
                 <h4 className="font-semibold bg-cover bg-center relative bg-no-repeat overflow-hidden image-mask tracking-[-2px] text-[--dark-gray2] leading-[2.5rem] font-spaceGrotesk mb-0 text-[2.375rem] bg-[url('/images/demo-digital-agency-text-img.jpg')]">
-                Dijitalleşen dünyada neredesiniz?
+                  Dijitalleşen dünyada neredesiniz?
                 </h4>
               </div>
             </div>

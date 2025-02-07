@@ -1,13 +1,11 @@
 "use client";
 import { motion, useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FaRegComments } from "react-icons/fa";
 
 export default function Section2() {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const spinnerRef = useRef(null);
   const bottomTextRef = useRef(null);
@@ -27,6 +25,10 @@ export default function Section2() {
     once: true,
     amount: 0.1,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="bg-[url('/images/demo-digital-agency-02.jpg')] bg-center relative overflow-hidden bg-fixed bg-cover pb-0 max-2xl:pt-[90px] max-lgx:[background-attachment:inherit] max-mdx:pt-[75px] max-md:pt-[50px]">

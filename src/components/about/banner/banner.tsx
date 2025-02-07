@@ -1,6 +1,6 @@
 "use client";
 import { motion, useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function Banner({
   title,
@@ -11,9 +11,7 @@ export default function Banner({
   title2?: string;
   text: string;
 }) {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const titleAndTextRef = useRef(null);
 
@@ -21,6 +19,10 @@ export default function Banner({
     once: true,
     amount: 0.2,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="[background-image:_linear-gradient(135deg,transparent_45%,#d1b9b2_45%,#d1b9b2_55%,transparent_0)] [background-size:_5px_5px] bg-[--base-color] max-2xl:py-[90px] mt-[83px] max-mdx:py-[75px] max-md:py-[50px]">

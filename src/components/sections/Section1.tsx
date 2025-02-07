@@ -8,10 +8,10 @@ export default function Section1() {
   const strongTextImgRef = useRef(null);
   const circleRef = useRef(null);
   const bottomPropRef = useRef(null);
-  const onlyNumberAndPlusContainerRef = useRef(null);
+  const onlyNumberAndPlusContainerRef = useRef<HTMLDivElement | null>(null);
 
   const [numberAndPlusBoundingClientRect, setNumberAndPlusBoundingClientRect] =
-    useState(null);
+    useState({ width: 0, height: 0 });
 
   const [numberAndPlusTranslateXValue, setNumberAndPlusTranslateXValue] =
     useState(0);
@@ -23,9 +23,7 @@ export default function Section1() {
   const [numberAndPlusAnimationCompleted, setNumberAndPlusAnimationCompleted] =
     useState(false);
 
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const strongTextImgViewArea = useInView(strongTextImgRef, {
     once: true,
@@ -42,7 +40,7 @@ export default function Section1() {
     amount: 0.2,
   });
 
-  const handleMouseMove = (event) => {
+  const handleMouseMove = (event: any) => {
     if (!numberAndPlusAnimationCompleted) {
       return;
     }
@@ -104,9 +102,13 @@ export default function Section1() {
   };
 
   useEffect(() => {
-    setNumberAndPlusBoundingClientRect(
-      onlyNumberAndPlusContainerRef.current.getBoundingClientRect()
-    );
+    setIsAnimationsPassive(window.innerWidth < 1217);
+
+    if (onlyNumberAndPlusContainerRef.current) {
+      setNumberAndPlusBoundingClientRect(
+        onlyNumberAndPlusContainerRef.current.getBoundingClientRect()
+      );
+    }
   }, []);
 
   return (
@@ -115,7 +117,6 @@ export default function Section1() {
         <div className="row mb-[6%] items-center max-md:mb-[50px]">
           <div className="px-[15px] text-center max-w-full md:text-left lgx:flex-[0_0_auto] lgx:w-[41.66666667%] mdx:flex-[0_0_auto] mdx:w-[41.66666667%] max-mdx:mb-[50px] max-md:mb-[30px]">
             <h2 className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-0">
-              
               <span
                 ref={strongTextImgRef}
                 className="shadow-none inline-block relative pb-0 mb-0"
@@ -136,7 +137,9 @@ export default function Section1() {
                   />
                 </span>
               </span>
-              {" ve Fethiye ofislerimizle, yaratıcı ve güçlü çözümler sunuyoruz."}
+              {
+                " ve Fethiye ofislerimizle, yaratıcı ve güçlü çözümler sunuyoruz."
+              }
             </h2>
           </div>
           <div
@@ -216,7 +219,10 @@ export default function Section1() {
                   }
                   className="mb-0 leading-[2rem] text-[18px] mt-0"
                 >
-                  Projelerimizde, her bir yazılım çözümünü işlevsellik ile güçlendirirken, tasarımlarımızda estetiği ön planda tutarak, kullanıcı dostu ve görsel olarak etkileyici dijital deneyimler oluşturuyoruz.
+                  Projelerimizde, her bir yazılım çözümünü işlevsellik ile
+                  güçlendirirken, tasarımlarımızda estetiği ön planda tutarak,
+                  kullanıcı dostu ve görsel olarak etkileyici dijital deneyimler
+                  oluşturuyoruz.
                 </motion.p>
               </div>
             </div>

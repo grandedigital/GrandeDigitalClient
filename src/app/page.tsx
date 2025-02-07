@@ -10,7 +10,7 @@ import Marquee from "@/components/sections/marqueeText";
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <Hero verticalText="HER ADIMDA KALİTE" />
       <Brands />
       <Section1 />
       <Section2 />

@@ -15,20 +15,13 @@
   },
   {
     "id": 3,
-    "name": "Expertise",
-    "activeDelay": 410,
-    "normalDelay": 350,
-    "href": "/expertise"
-  },
-  {
-    "id": 4,
     "name": "Portfolio",
     "activeDelay": 480,
     "normalDelay": 280,
     "href": "/portfolio"
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Contact",
     "activeDelay": 550,
     "normalDelay": 210,

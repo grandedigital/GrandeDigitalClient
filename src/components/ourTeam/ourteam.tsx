@@ -7,7 +7,7 @@ import { mapValue } from "@/utils/global";
 
 export default function OurTeam() {
   const [scrollY, setScrollY] = useState(0);
-  const elementRef = useRef(null);
+  const elementRef = useRef<HTMLDivElement | null>(null);
 
   const [sidePhotosScale, setSidePhotesScale] = useState(1);
   const [centerPhotoScale, setCenterPhotoScale] = useState(1);
@@ -16,7 +16,10 @@ export default function OurTeam() {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      const elementPos = elementRef.current.getBoundingClientRect();
+      var elementPos = { x: 0, y: 0, top: 0, height: 0 };
+      if (elementRef.current) {
+        elementPos = elementRef.current.getBoundingClientRect();
+      }
       //animasyonu başla ve hesaplayıp güncelle
       if (
         elementPos.top - window.innerHeight < 0 &&

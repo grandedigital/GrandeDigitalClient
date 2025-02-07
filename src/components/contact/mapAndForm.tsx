@@ -7,9 +7,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 
 export default function MapAndForm() {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
   const mapAndFormRef = useRef(null);
   const mapAndFormViewArea = useInView(mapAndFormRef, {
     once: true,
@@ -87,6 +85,10 @@ export default function MapAndForm() {
       }, 3000);
     }
   }, [isSuccesMessageActive]);
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="p-0">

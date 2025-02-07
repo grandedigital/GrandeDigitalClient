@@ -1,20 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 
 export default function Brands({ toPage = "homepage" }) {
   const brandsContainerRef = useRef(null);
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const bransViewArea = useInView(brandsContainerRef, {
     once: true,
     amount: 1,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
+
   if (toPage == "homepage") {
     return (
       <section

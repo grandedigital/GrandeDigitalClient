@@ -1,13 +1,11 @@
 "use client";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function Posts() {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const titleAndLinkRef = useRef(null);
   const postsRef = useRef(null);
@@ -21,6 +19,10 @@ export default function Posts() {
     once: true,
     amount: 0.2,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="pb-0 max-2xl:pt-[90px] max-mdx:pt-[75px] max-md:pt-[50px]">

@@ -1,15 +1,13 @@
 "use client";
 import { motion, useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Brands from "@/components/brands";
 import Link from "next/link";
 import { HiOutlineMail } from "react-icons/hi";
 import { PiPhoneCall } from "react-icons/pi";
 
 export default function Section1() {
-  const [isAnimationsPassive, setIsAnimationsPassive] = useState(
-    window.innerWidth < 1217
-  );
+  const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const contentRef = useRef(null);
 
@@ -17,6 +15,10 @@ export default function Section1() {
     once: true,
     amount: 0.1,
   });
+
+  useEffect(() => {
+    setIsAnimationsPassive(window.innerWidth < 1217);
+  }, []);
 
   return (
     <section className="max-2xl:py-[90px] max-mdx:py-[75px] max-md:py-[50px]">
