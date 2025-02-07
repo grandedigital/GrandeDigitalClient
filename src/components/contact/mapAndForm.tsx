@@ -7,7 +7,12 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { mapValue } from "@/utils/global";
 
-export default function MapAndForm() {
+export default function MapAndForm({
+  helloTexts = ["hello!", "halla!", "salve!"],
+}) {
+  const [activeHelloMessageIndex, setActiveHelloMessageIndex] = useState(0);
+  const [isStartedHelloTextAnimation, setStartedHelloTextAnimation] =
+    useState(false);
   const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
   const [imageTranslateYValue, setTranslateYValue] = useState(80);
   const mapAndFormRef = useRef(null);
@@ -113,11 +118,21 @@ export default function MapAndForm() {
         //hesaplanıp set edilcek yapılacak, yapılcak iş
       }
     };
+    const intervalId = setInterval(() => {
+      setActiveHelloMessageIndex((prevCount) =>
+        prevCount + 1 > helloTexts.length - 1 ? 0 : prevCount + 1
+      );
+      setStartedHelloTextAnimation(true);
+      setTimeout(() => {
+        setStartedHelloTextAnimation(false);
+      }, 2000);
+    }, 3000);
 
     window.addEventListener("scroll", handleScroll);
     // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearInterval(intervalId);
     };
   }, []);
 
@@ -134,6 +149,9 @@ export default function MapAndForm() {
               }
             }
             transition={{ duration: 0.8, delay: 0.3 }}
+            onAnimationComplete={() =>
+              mapAndFormViewArea && setStartedHelloTextAnimation(true)
+            }
             className="px-0 w-full max-w-full lgx:flex-[0_0_auto] lgx:w-1/2 bg-blue-300 bg-[url(/images/map.png)] bg-cover max-lgx:h-[600px] max-md:h-[400px] max-xsm:h-[300px] relative"
           >
             <Link
@@ -167,7 +185,29 @@ export default function MapAndForm() {
             <div className="z-1 p-[14%] bg-[--base-color] shadow-[0_0_45px_rgba(0,0,0,.09)] transition-all duration-350 ease-[cubic-bezier(.37,0,.63,1)] relative overflow-hidden max-lgx:p-[10%] max-md:p-[30px]">
               <h2 className="font-bold mb-[30px] tracking-[-2px] text-[--dark-gray2] text-[4.375rem] leading-[4.375rem] font-spaceGrotesk mt-0 md:mb-[20px]">
                 {"Say "}
-                <span className="">hello!</span>
+                {/* <span className="">hello!</span> */}
+                {helloTexts[activeHelloMessageIndex]
+                  .split("")
+                  .map((item, index) => (
+                    <motion.span
+                      initial={{ opacity: 0, rotateX: 90 }}
+                      animate={{
+                        opacity: isStartedHelloTextAnimation ? 1 : 0,
+                        rotateX: isStartedHelloTextAnimation ? 0 : 90,
+                      }}
+                      transition={{ duration: 0.3, delay: index * 0.05 }}
+                      onAnimationComplete={() =>
+                        isStartedHelloTextAnimation &&
+                        setTimeout(() => {
+                          setStartedHelloTextAnimation(false);
+                        }, 1700)
+                      }
+                      className="inline-block"
+                      key={index}
+                    >
+                      {item}
+                    </motion.span>
+                  ))}
               </h2>
               <form onSubmit={(e) => submitForm(e)}>
                 <div className="mb-[20px] relative">
