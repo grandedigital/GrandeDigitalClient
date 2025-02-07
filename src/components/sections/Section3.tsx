@@ -71,7 +71,7 @@ export default function Section3() {
               </p>
               <Link
                 href={"#"}
-                className="bg-[--dark-gray2] text-white text-[14px] py-[18px] px-[34px] border-2 border-solid border-transparent rounded-none uppercase tracking-[.5px] w-auto font-spaceGrotesk transition-all duration-300 ease-in-out [box-shadow:0_5px_20px_rgba(0,0,0,.1)] font-medium inline-block max-md:text-[13px] max-md:py-[16px] max-md:px-[36px]"
+                className="bg-[--dark-gray2] text-white text-[14px] py-[18px] px-[34px] border-2 border-solid border-transparent rounded-none uppercase tracking-[.5px] w-auto font-spaceGrotesk transition-all duration-300 ease-in-out [box-shadow:0_5px_20px_rgba(0,0,0,.1)] font-medium inline-block max-md:text-[13px] max-md:py-[16px] max-md:px-[36px] hover:translate-y-[-3px]"
               >
                 {"HEMEN BAŞLA"}
                 <HiOutlineMail size={18} className="ml-[6px] inline-block" />
