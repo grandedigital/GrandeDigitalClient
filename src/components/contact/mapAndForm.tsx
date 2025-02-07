@@ -5,13 +5,16 @@ import { FormEvent, useEffect, useState, useRef } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
+import { mapValue } from "@/utils/global";
 
 export default function MapAndForm() {
   const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
+  const [imageTranslateYValue, setTranslateYValue] = useState(80);
   const mapAndFormRef = useRef(null);
+  const contactImg = useRef<HTMLImageElement | null>(null);
   const mapAndFormViewArea = useInView(mapAndFormRef, {
     once: true,
-    amount: 0.2,
+    amount: 0.01,
   });
 
   const [name, setName] = useState("");
@@ -88,6 +91,34 @@ export default function MapAndForm() {
 
   useEffect(() => {
     setIsAnimationsPassive(window.innerWidth < 1217);
+    const windowHeight = window.innerHeight;
+
+    const handleScroll = () => {
+      if (contactImg.current) {
+        if (
+          contactImg.current.getBoundingClientRect().top < windowHeight &&
+          contactImg.current.getBoundingClientRect().top >
+            0 - contactImg.current.getBoundingClientRect().height
+        ) {
+          setTranslateYValue(
+            mapValue(
+              contactImg.current.getBoundingClientRect().top,
+              0 - contactImg.current.getBoundingClientRect().height,
+              windowHeight,
+              200,
+              80
+            )
+          );
+        }
+        //hesaplanıp set edilcek yapılacak, yapılcak iş
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -125,9 +156,13 @@ export default function MapAndForm() {
             className="px-0 relative w-full max-w-full xxl:flex-[0_0_auto] xxl:w-1/3 lgx:flex-[0_0_auto] lgx:w-1/2"
           >
             <img
-              className="right-[-40%] z-9 transition-all duration-600 ease-[cubic-bezier(.23,1,.32,1)] absolute hidden max-w-full h-auto xxl:block"
+              ref={contactImg}
+              className="right-[-40%] z-9 transition-all duration-1500 ease-[cubic-bezier(.23,1,.32,1)] absolute hidden max-w-full h-auto xxl:block"
               src="/images/contactImg.webp"
               alt=""
+              style={{
+                transform: `translate3d(0px,${imageTranslateYValue}px,0px)`,
+              }}
             />
             <div className="z-1 p-[14%] bg-[--base-color] shadow-[0_0_45px_rgba(0,0,0,.09)] transition-all duration-350 ease-[cubic-bezier(.37,0,.63,1)] relative overflow-hidden max-lgx:p-[10%] max-md:p-[30px]">
               <h2 className="font-bold mb-[30px] tracking-[-2px] text-[--dark-gray2] text-[4.375rem] leading-[4.375rem] font-spaceGrotesk mt-0 md:mb-[20px]">
