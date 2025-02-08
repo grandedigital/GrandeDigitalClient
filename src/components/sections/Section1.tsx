@@ -96,7 +96,6 @@ export default function Section1() {
 
   const handleCompletedCircleAnimation = () => {
     if (!numberAndPlusAnimationCompleted) {
-      console.log("asdf");
       setNumberAndPlusAnimationCompleted(true);
     }
   };
