@@ -4,7 +4,11 @@ import { useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-export default function Posts() {
+export default function Posts({
+  isNavigateButtonActive = true,
+}: {
+  isNavigateButtonActive: boolean;
+}) {
   const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 
   const titleAndLinkRef = useRef(null);
@@ -43,58 +47,60 @@ export default function Posts() {
               Bloglarımız
             </h2>
           </motion.div>
-          <motion.div
-            initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
-            animate={
-              !isAnimationsPassive && {
-                translateY: longTextViewArea ? 0 : 30,
-                opacity: longTextViewArea ? 1 : 0,
+          {isNavigateButtonActive && (
+            <motion.div
+              initial={!isAnimationsPassive && { translateY: 30, opacity: 0 }}
+              animate={
+                !isAnimationsPassive && {
+                  translateY: longTextViewArea ? 0 : 30,
+                  opacity: longTextViewArea ? 1 : 0,
+                }
               }
-            }
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="px-[15px] text-center w-full max-w-full md:text-right md:flex-[0_0_auto] md:w-1/2"
-          >
-            <Link
-              href={"#"}
-              className="group border-b-0 p-0 normal-case relative border-0 tracking-[0] bg-transparent text-[--dark-gray2] rounded-none w-auto transition-all duration-300 ease-in-out font-medium inline-block text-18 leading-[--bs-btn-line-height] text-center align-middle cursor-pointer select-none"
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="px-[15px] text-center w-full max-w-full md:text-right md:flex-[0_0_auto] md:w-1/2"
             >
-              <span className="inline-flex items-center">
-                <span className="ml-[-13px] relative z-3 transition-transform duration-600 delay-100 ease-[cubic-bezier(.1,.75,.25,1)] group-hover:translate-x-[20px] group-hover:delay-200">
-                  Read all posts
+              <Link
+                href={"/blogs"}
+                className="group border-b-0 p-0 normal-case relative border-0 tracking-[0] bg-transparent text-[--dark-gray2] rounded-none w-auto transition-all duration-300 ease-in-out font-medium inline-block text-18 leading-[--bs-btn-line-height] text-center align-middle cursor-pointer select-none"
+              >
+                <span className="inline-flex items-center">
+                  <span className="ml-[-13px] relative z-3 transition-transform duration-600 delay-100 ease-[cubic-bezier(.1,.75,.25,1)] group-hover:translate-x-[20px] group-hover:delay-200">
+                    Read all posts
+                  </span>
+                  <span className="ml-[6px] relative post-arrow-icon delay-200 leading-[0] z-3 opacity-100 group-hover:translate-x-[20px] group-hover:opacity-0 group-hover:delay-100">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="19"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                      className="m-0 leading-[0] relative inline-block"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      />
+                    </svg>
+                  </span>
+                  <span className="-order-2 opacity-0 ml-0 translate-x-[-10px] relative post-arrow-icon delay-0 leading-[0] z-3 group-hover:opacity-100 group-hover:translate-x-0 group-hover:delay-350">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="19"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                      className="m-0 leading-[0] relative inline-block"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      />
+                    </svg>
+                  </span>
                 </span>
-                <span className="ml-[6px] relative post-arrow-icon delay-200 leading-[0] z-3 opacity-100 group-hover:translate-x-[20px] group-hover:opacity-0 group-hover:delay-100">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="19"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    className="m-0 leading-[0] relative inline-block"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                    />
-                  </svg>
-                </span>
-                <span className="-order-2 opacity-0 ml-0 translate-x-[-10px] relative post-arrow-icon delay-0 leading-[0] z-3 group-hover:opacity-100 group-hover:translate-x-0 group-hover:delay-350">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="19"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    className="m-0 leading-[0] relative inline-block"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </Link>
-          </motion.div>
+              </Link>
+            </motion.div>
+          )}
         </div>
         <div ref={postsRef} className="row">
           <div className="flex-[0_0_auto] w-full max-w-full flex flex-wrap md:p-0">
