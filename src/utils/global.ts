@@ -35,7 +35,8 @@ function scrollToTop(duration: number): void {
 //normalize fonksiyonu
 function mapValue(value: number, min: number, max: number, rangeMin: number, rangeMax: number) {
     if (value < min || value > max) {
-        throw new Error("Değer belirtilen min-max aralığında olmalıdır.");
+        // throw new Error("Değer belirtilen min-max aralığında olmalıdır.");
+        return;
     }
 
     return rangeMin + ((value - min) / (max - min)) * (rangeMax - rangeMin);
