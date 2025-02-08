@@ -112,7 +112,7 @@ export default function MapAndForm({
               windowHeight,
               200,
               80
-            )
+            ) || 80
           );
         }
         //hesaplanıp set edilcek yapılacak, yapılcak iş
