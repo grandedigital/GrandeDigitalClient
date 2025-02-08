@@ -108,6 +108,12 @@ button {
   line-height: inherit;
 }
 
+.h1,
+h1 {
+  font-size: 4.375rem;
+  line-height: 4.375rem;
+}
+
 h2 {
   font-size: 3.438rem;
   line-height: 3.438rem;
