@@ -4,6 +4,7 @@ import Content3 from "@/components/blog/content3";
 import FullPhoto1 from "@/components/blog/fullPhoto1";
 import Header from "@/components/blog/header";
 import PhotoWithTwoSection from "@/components/blog/photoWithTwoSection";
+import Section1 from "@/components/blog/section1";
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <Content2 />
       <PhotoWithTwoSection />
       <Content3 />
+      <Section1 />
     </div>
   );
 }
