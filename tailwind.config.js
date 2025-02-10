@@ -14,7 +14,8 @@ module.exports = {
         "18": "18px",
         "19": "19px",
         "20": "20px",
-        "22": "22px"
+        "22": "22px",
+        "24": "24px"
       },
       animation: {
         "marquee": "marquee 10s linear infinite"

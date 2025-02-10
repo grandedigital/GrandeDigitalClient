@@ -27,7 +27,7 @@
   }
 
   .blog-tab-button {
-    @apply text-center text-14 leading-[20px] m-[0_6px_10px_0]
+    @apply text-center text-14 leading-[20px] m-[0_6px_10px_0] py-[7px] px-[18px] rounded-[4px] border border-solid border-[--extra-medium-gray] inline-block hover:shadow-[0_0_10px_rgba(23,23,23,.1)] hover:text-[--dark-gray2] hover:bg-white;
   }
 
   .nav-item {
