@@ -26,6 +26,10 @@
     @apply h-[2px] w-[22px] block rounded-none absolute left-0 right-0 mx-auto transition-all duration-250 max-mdx:bg-white;
   }
 
+  .blog-tab-button {
+    @apply text-center text-14 leading-[20px] m-[0_6px_10px_0]
+  }
+
   .nav-item {
     @apply flex self-stretch items-center max-mdx:block;
   }
