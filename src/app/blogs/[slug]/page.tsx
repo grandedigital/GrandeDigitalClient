@@ -5,6 +5,7 @@ import FullPhoto1 from "@/components/blog/fullPhoto1";
 import Header from "@/components/blog/header";
 import PhotoWithTwoSection from "@/components/blog/photoWithTwoSection";
 import Section1 from "@/components/blog/section1";
+import Posts from "@/components/posts";
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
       <PhotoWithTwoSection />
       <Content3 />
       <Section1 />
+      <Posts isNavigateButtonActive={true} />
     </div>
   );
 }
