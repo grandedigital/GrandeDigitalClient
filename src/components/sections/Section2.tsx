@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function Section2({
-  longText = "İyi bir ekip, harika işler demek. Biz de size en iyisini sunmak için buradayız.",
+  longText = "İyi bir ekip, harika işler demek..",
 }) {
   const [isAnimationsPassive, setIsAnimationsPassive] = useState(false);
 

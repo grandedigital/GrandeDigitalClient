@@ -9,10 +9,10 @@ export default function Page() {
   return (
     <div>
       <Banner
-        title={"About"}
-        title2=" us"
+        title={""}
+        title2="Hakkımızda"
         text={
-          "We are committed to deliver unique digital media solutions from design to eCommerce solutions."
+          "Düşün, taşın, tasarla! Teknoloji ve tasarımın gücünü birleştiriyoruz."
         }
       />
       <Section1 />

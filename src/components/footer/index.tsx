@@ -56,51 +56,68 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="px-[15px] w-full flex-[0_0_auto] max-w-full mdx:order-2 md:order-3 mdx:w-1/3 lgx:w-1/4 md:w-1/2 max-md:mb-[20px]">
+
+          <div className="px-[15px] w-full flex-[0_0_auto] max-w-full md:order-4 lgx:w-1/4 mdx:w-1/3 md:w-1/2 max-md:mb-[30px]">
             <span className="font-semibold text-[--dark-gray2] text-14 uppercase block">
-              Rotterdam
+            İstanbul
             </span>
             <p className="mb-[25px] mt-0">
               <strong className="font-semibold text-[--dark-gray2]">
-                Crafto digital media.
+                Project Office
               </strong>
               <br />
-              Graaf florisstraat 22A, Netherlands.
-            </p>
-            <span className="font-semibold text-[--dark-gray2] text-14 uppercase block">
-              Barcelona
-            </span>
-            <p className="mb-0 mt-0">
-              <strong className="font-semibold text-[--dark-gray2]">
-                Crafto digital media.
-              </strong>
-              <br />
-              365 Grand via de coarts, Barcelona.
+              Taşdelen Mah. <br/> Çekmeköy / İstanbul
             </p>
           </div>
           <div className="px-[15px] w-full flex-[0_0_auto] max-w-full md:order-4 lgx:w-1/4 mdx:w-1/3 md:w-1/2 max-md:mb-[30px]">
-            <span className="font-semibold text-[--dark-gray2] text-14 uppercase block">
-              Work inquiries
+          <span className="font-semibold text-[--dark-gray2] text-14 uppercase block">
+              Fethiye
             </span>
-            <p className="mb-0 mt-0">Interested in working with us?</p>
-            <Link
-              href={"#"}
-              className="font-semibold mb-[50px] border-b text-[--dark-gray2] inline-block max-md:mb-[30px]"
-            >
-              hello@yourdomain.com
-            </Link>
-            <span className="font-semibold text-[--dark-gray2] text-14 uppercase block">
-              Work with us
-            </span>
-            <p className="mb-0 mt-0">Looking for a job opportunity?</p>
-            <Link
-              href={"#"}
-              className="font-semibold mb-[50px] border-b text-[--dark-gray2] inline-block max-md:mb-[30px]"
-            >
-              hr@yourdomain.com
-            </Link>
+            <p className="mb-0 mt-0">
+              <strong className="font-semibold text-[--dark-gray2]">
+              Project & Planning Office
+              </strong>
+              <br />
+              Ovacık Mah. <br /> Fethiye / Muğla
+            </p>
           </div>
-          <div className="px-[15px] w-full flex-[0_0_auto] max-w-full mdx:order-4 md:order-2 lgx:w-1/4 mdx:w-1/3 md:1/2 max-mdx:mb-[30px] max-md:mb-0">
+
+          {/* <div className="px-[15px] w-full flex-[0_0_auto] max-w-full mdx:order-2 md:order-3 mdx:w-1/3 lgx:w-1/4 md:w-1/2 max-md:mb-[20px]">
+            <span className="font-semibold text-[--dark-gray2] text-14 uppercase block">
+              İstanbul
+            </span>
+            <p className="mb-[25px] mt-0">
+              <strong className="font-semibold text-[--dark-gray2]">
+                Project Office
+              </strong>
+              <br />
+              Taşdelen Mah. <br/> Çekmeköy / İstanbul
+            </p>
+            <span className="font-semibold text-[--dark-gray2] text-14 uppercase block">
+              Fethiye
+            </span>
+            <p className="mb-0 mt-0">
+              <strong className="font-semibold text-[--dark-gray2]">
+              Project & Planning Office
+              </strong>
+              <br />
+              Ovacık Mah. <br /> Fethiye / Muğla
+            </p>
+          </div> */}
+          <div className="px-[15px] w-full flex-[0_0_auto] max-w-full md:order-4 lgx:w-1/4 mdx:w-1/3 md:w-1/2 max-md:mb-[30px]">
+            <span className="font-semibold text-[--dark-gray2] text-14 uppercase block">
+              Projeleriniz için
+            </span>
+            <p className="mb-0 mt-0">Bizimle çalışmak istermisiniz?</p>
+            <Link
+              href={"#"}
+              className="font-semibold mb-[50px] border-b text-[--dark-gray2] inline-block max-md:mb-[30px]"
+            >
+              info@grandedigital.com
+            </Link>
+          
+          </div>
+          {/* <div className="px-[15px] w-full flex-[0_0_auto] max-w-full mdx:order-4 md:order-2 lgx:w-1/4 mdx:w-1/3 md:1/2 max-mdx:mb-[30px] max-md:mb-0">
             <span className="font-semibold mb-[15px] text-[--dark-gray2] text-14 uppercase block">
               Sign up for the newsletter
             </span>
@@ -116,7 +133,7 @@ export default function Footer() {
                 Protecting your privacy
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="row pt-[5%] items-center justify-center max-md:pt-[35px]">
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full">
@@ -124,13 +141,13 @@ export default function Footer() {
           </div>
           <div className="py-[15px] text-15 px-[15px] text-center order-2 w-full max-w-full mdx:text-left mdx:order-1 mdx:flex-[0_0_auto] mdx:w-[41.66666667%] max-mdx:pt-0">
             <p className="mb-0 mt-0">
-              {"© 2024 Crafto is Proudly Powered by "}
-              <Link
+              {"2025 Grande Digital © "}
+              {/* <Link
                 href={"#"}
                 className="font-semibold border-b text-[--dark-gray2] border-[initial]"
               >
                 GrandeDigital
-              </Link>
+              </Link> */}
             </p>
           </div>
           <div className="py-[15px] text-15 px-[15px] text-center order-1 w-full max-w-full mdx:text-right mdx:order-2 mdx:flex-[0_0_auto] mdx:w-[58.33333333%] max-mdx:pb-[5px]">
@@ -140,23 +157,15 @@ export default function Footer() {
                   href={"#"}
                   className="pl-0 text-[--medium-gray] py-[.5rem] px-[1rem] block transition-all duration-200 ease-in-out max-md:pr-[.8rem] hover:text-[--dark-gray2]"
                 >
-                  Privacy policy
+                  Gizlilik Politikamız
                 </Link>
               </li>
               <li className="mb-0 inline-block list-none">
                 <Link
-                  href={"#"}
-                  className="text-[--medium-gray] py-[.5rem] px-[1rem] block transition-all duration-200 ease-in-out max-md:pr-[.8rem] hover:text-[--dark-gray2]"
-                >
-                  Terms and conditions
-                </Link>
-              </li>
-              <li className="mb-0 inline-block list-none">
-                <Link
-                  href={"#"}
+                  href={"/contact"}
                   className="pr-0 text-[--medium-gray] py-[.5rem] px-[1rem] block transition-all duration-200 ease-in-out max-md:pr-[.8rem] hover:text-[--dark-gray2]"
                 >
-                  Copyright
+                  İletişim
                 </Link>
               </li>
             </ul>

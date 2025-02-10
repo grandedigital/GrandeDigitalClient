@@ -81,7 +81,7 @@ export default function Section2() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="tracking-[-2px] [text-shadow:_0_0_60px_rgba(0,0,0,.9)] font-spaceGrotesk text-white max-md:mb-[25px]"
             >
-              Forward thinking team of designers, copywriters and developers.{" "}
+              Düşün, taşın, tasarla! 
             </motion.h2>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function Section2() {
                 </div>
                 <div className="flex-1">
                   <span className="text-20 font-spaceGrotesk text-white max-lgx:text-18">
-                    Trusted company
+                  Kesintisiz Hizmet
                   </span>
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default function Section2() {
                 </div>
                 <div className="flex-1">
                   <span className="text-20 font-spaceGrotesk text-white max-lgx:text-18">
-                    Award winning
+                  İleri Düzey Teknoloji
                   </span>
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function Section2() {
                 </div>
                 <div className="flex-1">
                   <span className="text-20 font-spaceGrotesk text-white max-lgx:text-18">
-                    Professional work
+                  Ölçeklenebilir Altyapı
                   </span>
                 </div>
               </div>
@@ -193,7 +193,7 @@ export default function Section2() {
                 </div>
                 <div className="flex-1">
                   <span className="text-20 font-spaceGrotesk text-white max-lgx:text-18">
-                    Help any time
+                    Daima Destek
                   </span>
                 </div>
               </div>
