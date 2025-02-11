@@ -18,7 +18,7 @@ export default function Content1() {
                   <span className="leading-[22px] block">Words by</span>
                   <Link
                     href={"#"}
-                    className="font-medium text-[--dark-gray2] font-spaceGrotesk duration-300"
+                    className="font-medium text-[--dark-gray2] font-spaceGrotesk duration-300 hover:text-[--base-color]"
                   >
                     JACKSON SMITH
                   </Link>
@@ -28,7 +28,7 @@ export default function Content1() {
                   <li className="mr-[25px] list-none">
                     <Link
                       href={"#"}
-                      className="text-13 font-spaceGrotesk duration-300 text-[--medium-gray]"
+                      className="text-13 font-spaceGrotesk duration-300 text-[--medium-gray] hover:text-[--base-color]"
                     >
                       <FaRegComment
                         size={18}
@@ -40,7 +40,7 @@ export default function Content1() {
                   <li className="list-none">
                     <Link
                       href={"#"}
-                      className="text-13 font-spaceGrotesk duration-300 text-[--medium-gray]"
+                      className="text-13 font-spaceGrotesk duration-300 text-[--medium-gray] hover:text-[--base-color]"
                     >
                       <FaRegHeart size={18} className="mr-[5px] inline-block" />
                       {"LIKE"}

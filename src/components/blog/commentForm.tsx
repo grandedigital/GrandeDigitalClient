@@ -172,9 +172,9 @@ export default function CommentForm() {
               <div className="px-[15px] flex-[0_0_auto] w-full max-w-full">
                 <button
                   type="submit"
-                  className="bg-[--dark-gray2] text-white rounded-[4px] text-12 py-[13px] px-[26px] cursor-pointer border-2 border-solid border-transparent tracking-[.5px] w-auto font-spaceGrotesk transition-all duration-300 ease-in-out font-medium leading-[1.5] select-none"
+                  className="bg-[--dark-gray2] text-white rounded-[4px] text-12 py-[13px] px-[26px] cursor-pointer border-2 border-solid border-transparent tracking-[.5px] w-auto font-spaceGrotesk transition-all duration-300 ease-in-out font-medium leading-[1.5] select-none hover:bg-transparent hover:border-[--dark-gray2] hover:text-[--dark-gray2]"
                 >
-                  Post Comment
+                  POST COMMENT
                 </button>
                 <div
                   className="bg-[#f1fbec] text-[#54b783] border-[#cce8b3] p-[20px_25px_20px_30px] mb-[30px] leading-[22px] relative z-1 rounded-[4px] mt-[20px] border border-solid transition-all duration-600"

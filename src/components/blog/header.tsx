@@ -10,14 +10,14 @@ export default function Header() {
               {"By "}
               <Link
                 href={"#"}
-                className="border-b border-solid text-[--dark-gray2] duration-300 border-[--dark-gray2]"
+                className="border-b border-solid text-[--dark-gray2] duration-300 border-[--dark-gray2] hover:text-[--base-color] hover:border-[--base-color]"
               >
                 Jackson
               </Link>
               {" In "}
               <Link
                 href={"#"}
-                className="border-b border-solid text-[--dark-gray2] duration-300 border-[--dark-gray2]"
+                className="border-b border-solid text-[--dark-gray2] duration-300 border-[--dark-gray2] hover:text-[--base-color] hover:border-[--base-color]"
               >
                 Marketing
               </Link>

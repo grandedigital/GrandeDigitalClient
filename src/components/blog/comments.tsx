@@ -27,13 +27,13 @@ export default function Comments() {
                   <div className="pl-[30px] w-full max-md:pl-0">
                     <Link
                       href={"#"}
-                      className="font-medium text-[--dark-gray2] duration-300"
+                      className="font-medium text-[--dark-gray2] duration-300 hover:text-[--base-color]"
                     >
                       Herman Miller
                     </Link>
                     <Link
                       href={"#"}
-                      className="float-right text-11 leading-[initial] p-[7px_20px_6px] rounded-[50px] border border-[rgba(44,44,44,.25)] border-solid duration-300 text-[--medium-gray]"
+                      className="float-right text-11 leading-[initial] p-[7px_20px_6px] rounded-[50px] border border-[rgba(44,44,44,.25)] border-solid duration-300 text-[--medium-gray] hover:border-[--base-color] hover:bg-[--base-color] hover:text-white"
                     >
                       Reply
                     </Link>
@@ -60,13 +60,13 @@ export default function Comments() {
                       <div className="pl-[30px] w-full max-md:pl-0">
                         <Link
                           href={"#"}
-                          className="font-medium text-[--dark-gray2] duration-300"
+                          className="font-medium text-[--dark-gray2] duration-300 hover:text-[--base-color]"
                         >
                           Wilbur Haddock
                         </Link>
                         <Link
                           href={"#"}
-                          className="float-right text-11 leading-[initial] p-[7px_20px_6px] rounded-[50px] border border-solid border-[rgba(44,44,44,.25)] bg-white duration-300"
+                          className="float-right text-11 leading-[initial] p-[7px_20px_6px] rounded-[50px] border border-solid border-[rgba(44,44,44,.25)] bg-white duration-300 hover:border-[--base-color] hover:bg-[--base-color] hover:text-white"
                         >
                           Reply
                         </Link>
@@ -93,13 +93,13 @@ export default function Comments() {
                       <div className="pl-[30px] w-full max-md:pl-0">
                         <Link
                           href={"#"}
-                          className="font-medium text-[--dark-gray2] duration-300"
+                          className="font-medium text-[--dark-gray2] duration-300 hover:text-[--base-color]"
                         >
                           Colene Landin
                         </Link>
                         <Link
                           href={"#"}
-                          className="float-right text-11 leading-[initial] p-[7px_20px_6px] rounded-[50px] border border-[rgba(44,44,44,.25)] border-solid duration-300 text-[--medium-gray]"
+                          className="float-right text-11 leading-[initial] p-[7px_20px_6px] rounded-[50px] border border-[rgba(44,44,44,.25)] border-solid duration-300 text-[--medium-gray] hover:border-[--base-color] hover:bg-[--base-color] hover:text-white"
                         >
                           Reply
                         </Link>
@@ -132,13 +132,13 @@ export default function Comments() {
                   <div className="pl-[30px] w-full max-md:pl-0">
                     <Link
                       href={"#"}
-                      className="font-medium text-[--dark-gray2] duration-300"
+                      className="font-medium text-[--dark-gray2] duration-300 hover:text-[--base-color]"
                     >
                       Jennifer Freeman
                     </Link>
                     <Link
                       href={"#"}
-                      className="float-right text-11 leading-[initial] p-[7px_20px_6px] rounded-[50px] border border-[rgba(44,44,44,.25)] border-solid duration-300 text-[--medium-gray]"
+                      className="float-right text-11 leading-[initial] p-[7px_20px_6px] rounded-[50px] border border-[rgba(44,44,44,.25)] border-solid duration-300 text-[--medium-gray] hover:border-[--base-color] hover:bg-[--base-color] hover:text-white"
                     >
                       Reply
                     </Link>
