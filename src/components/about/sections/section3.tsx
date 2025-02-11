@@ -32,9 +32,9 @@ export default function Section3() {
               transition={{ duration: 0.6, delay: 0 }}
               className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-[30px] max-md:mb-[25px]"
             >
-              {"We want to bring and business the "}
+            İyi bir ekip, harika işler demek. Biz de size en iyisini sunmak için 
               <span className="shadow-none inline-block transition-shadow duration-500 ease-[cubic-bezier(.7,0,.3,1)] relative pb-0 mb-0">
-                {"digital"}
+                {" buradayız."}
                 <span className="h-[45px] bottom-[-10px] -z-1 float-left w-full absolute left-0">
                   <img
                     src="/images/demo-digital-agency-highlight-separator.webp"
@@ -43,7 +43,6 @@ export default function Section3() {
                   />
                 </span>
               </span>
-              {" world."}
             </motion.h2>
           </div>
           <div className="transition-none px-[15px] w-full max-w-full mdx:w-[58.33333333%] mdx:flex-[0_0_auto]">
@@ -60,13 +59,12 @@ export default function Section3() {
             >
               <div className="px-[15px] w-full max-w-full md:w-[41.66666667%] md:flex-[0_0_auto]">
                 <div className="font-semibold w-[90%] text-[--dark-gray2] text-[19px] max-xxl:w-full max-md:mb-[10px]">
-                  Successfully finished projects with creativity.
+                Web Tasarımı ve Geliştirme
                 </div>
               </div>
               <div className="px-[15px] w-full max-w-full md:w-[58.33333333%] md:flex-[0_0_auto]">
                 <p className="mb-0 mt-0">
-                  We value each and every human life placed our hands constantly
-                  work towards meeting the expectations of our customers.
+                Küçük ölçekli girişimlerden büyük çaplı projelere kadar, her tür ihtiyaç için özel web çözümleri sunuyor ve gerçek dünyada uygulanabilir, etkili web tasarımları geliştiriyoruz.
                 </p>
               </div>
             </motion.div>
@@ -84,13 +82,12 @@ export default function Section3() {
             >
               <div className="px-[15px] w-full max-w-full md:w-[41.66666667%] md:flex-[0_0_auto]">
                 <div className="font-semibold w-[90%] text-[--dark-gray2] text-[19px] max-xxl:w-full max-md:mb-[10px]">
-                  Work together for better branding solutions.
+                Yazılım Geliştirme
                 </div>
               </div>
               <div className="px-[15px] w-full max-w-full md:w-[58.33333333%] md:flex-[0_0_auto]">
                 <p className="mb-0 mt-0">
-                  We value each and every human life placed our hands constantly
-                  work towards meeting the expectations of our customers.
+                Her ölçekteki projeye özel, yüksek verimli ve ölçeklenebilir yazılım çözümleri geliştirmek için çalışıyor, iş süreçlerini dijital dünyada güçlendiren özelleştirilmiş yazılımlar sunuyoruz.
                 </p>
               </div>
             </motion.div>
@@ -108,13 +105,12 @@ export default function Section3() {
             >
               <div className="px-[15px] w-full max-w-full md:w-[41.66666667%] md:flex-[0_0_auto]">
                 <div className="font-semibold w-[90%] text-[--dark-gray2] text-[19px] max-xxl:w-full max-md:mb-[10px]">
-                  Committed to deliver unique digital media.
+                Mobil Uygulama Geliştirme
                 </div>
               </div>
               <div className="px-[15px] w-full max-w-full md:w-[58.33333333%] md:flex-[0_0_auto]">
                 <p className="mb-0 mt-0">
-                  We value each and every human life placed our hands constantly
-                  work towards meeting the expectations of our customers.
+                Farklı platformlarda çalışabilen, kullanıcı dostu ve yüksek performanslı mobil uygulamalar geliştirmek için çaba harcıyor, her ihtiyaca yönelik yenilikçi mobil çözümler sunuyoruz.
                 </p>
               </div>
             </motion.div>
