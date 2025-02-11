@@ -21,7 +21,8 @@ export default function RootLayout({
       <body>
         <MenuProvider>
           <Header />
-          {children}
+          <div style={{overflow: "hidden"}}>{children}</div>
+
           <MobilMenu />
           <ScrollProgres />
           <Footer />
