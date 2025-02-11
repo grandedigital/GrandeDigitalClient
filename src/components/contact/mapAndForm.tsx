@@ -279,7 +279,7 @@ export default function MapAndForm({
                     type="submit"
                     className="bg-[--dark-gray2] text-white rounded-[4px] text-13 py-[16px] px-[30px] cursor-pointer border-2 border-transparent uppercase tracking-[.5px] font-spaceGrotesk transition-all duration-300 ease-in-out shadow-[0 5px_20px_rgba(0,0,0,.1)] font-medium inline-block mb-[20px] mt-[25px] w-full text-center align-middle select-none m-0 leading-[1.5] hover:translate-y-[-3px]"
                   >
-                    {"Send message"}
+                    {"MESAJ GÖNDER"}
                     <HiOutlineMail
                       size={16}
                       className="relative ml-[6px] inline-block"

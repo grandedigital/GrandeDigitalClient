@@ -1,30 +1,30 @@
 [
   {
     "id": 1,
-    "name": "Home",
+    "name": "Anasayfa",
     "activeDelay": 270,
     "normalDelay": 490,
     "href": "/"
   },
   {
     "id": 2,
-    "name": "Agency",
+    "name": "Hakkımızda",
     "activeDelay": 340,
     "normalDelay": 420,
-    "href": "/agency"
+    "href": "/hakkimizda"
   },
   {
     "id": 3,
-    "name": "Portfolio",
+    "name": "Projelerimiz",
     "activeDelay": 480,
     "normalDelay": 280,
-    "href": "/portfolio"
+    "href": "/projelerimiz"
   },
   {
     "id": 4,
-    "name": "Contact",
+    "name": "İletişim",
     "activeDelay": 550,
     "normalDelay": 210,
-    "href": "/contact"
+    "href": "/iletisim"
   }
 ]

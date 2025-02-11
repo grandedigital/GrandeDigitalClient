@@ -81,13 +81,13 @@ export default function Header() {
             <div className="flex items-center">
               <div>
                 <Link
-                  href={"#"}
+                  href={"/iletisim"}
                   className="p-0 bg-transparent border-[--extra-medium-gray] text-[--dark-gray] text-[13px] normal-case tracking-[0] font-semibold rounded-none w-auto font-spaceGrotesk transition-all duration-300 ease-in-out inline-block border-[1px] items-center no-underline leading-[--bs-btn-line-height] align-middle cursor-pointer select-none max-md:p-0 hover:bg-black hover:border-black group hover:text-white"
                 >
                   <span className="py-[12px] px-[22px] inline-flex items-center relative overflow-hidden">
                     <HiOutlineMail size={14} className="mr-[6px]" />
                     <span className="text-[--dark-gray] before:content-['Send_a_message'] transition-all duration-700 ease-[cubic-bezier(.15,.85,.31,1)] before:inline-block before:absolute before:whitespace-nowrap before:top-[50%] before:opacity-0 group-hover:before:opacity-100 before:left-[50%] before:translate-x-[-50%] before:translate-y-[100%] group-hover:text-white group-hover:translate-y-[-200%] group-hover:before:translate-x-[-50%] group-hover:before:translate-y-[150%]">
-                      Send a message
+                      Mesaj gönder
                     </span>
                   </span>
                 </Link>

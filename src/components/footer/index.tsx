@@ -162,7 +162,7 @@ export default function Footer() {
               </li>
               <li className="mb-0 inline-block list-none">
                 <Link
-                  href={"/contact"}
+                  href={"/iletisim"}
                   className="pr-0 text-[--medium-gray] py-[.5rem] px-[1rem] block transition-all duration-200 ease-in-out max-md:pr-[.8rem] hover:text-[--dark-gray2]"
                 >
                   İletişim

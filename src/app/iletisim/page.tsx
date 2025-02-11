@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div>
       <Banner
-        title={"Contact"}
+        title={"İletişim"}
         text={
           "We're here to here answer any question you may have. Let us help you get your project started."
         }

@@ -65,10 +65,10 @@ export default function Section1() {
               </div>
               <div>
                 <span className="font-semibold mb-[5px] text-[--dark-gray2] text-19 block">
-                  Office location
+                  Ofis
                 </span>
                 <p className="mb-0 w-[80%] mx-auto mt-0 max-xxl:w-full max-mdx:w-[75%]">
-                  27 Eden walk eden center, Orchard view, Paris, France
+                  Taşdelen Mah. Çekmeköy / İstanbul
                 </p>
               </div>
             </div>
@@ -94,22 +94,22 @@ export default function Section1() {
               </div>
               <div>
                 <span className="font-semibold mb-[5px] text-[--dark-gray2] text-19 block">
-                  Send a message
+                  Mesaj gönder
                 </span>
                 <div className="w-full block">
                   <Link
-                    href={"mailto:info@yourdomain.com"}
+                    href={"mailto:info@grandedigital.com"}
                     className="transition-all duration-300 text-[--medium-gray] hover:text-[--dark-gray2]"
                   >
-                    info@yourdomain.com
+                    info@grandedigital.com
                   </Link>
                   <br />
-                  <Link
+                  {/* <Link
                     href={"mailto:hr@yourdomain.com"}
                     className="transition-all duration-300 text-[--medium-gray] hover:text-[--dark-gray2]"
                   >
                     hr@yourdomain.com
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -141,10 +141,10 @@ export default function Section1() {
                   <span className="block">
                     {"Phone: "}
                     <Link
-                      href={"tel:1800222000"}
+                      href={"tel:05382403883"}
                       className="transition-all duration-300 text-[--medium-gray] hover:text-[--dark-gray2]"
                     >
-                      1-800-222-000
+                      05382403883
                     </Link>
                   </span>
                   <span className="block">Fax: 1-800-222-002</span>

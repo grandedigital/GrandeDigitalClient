@@ -60,7 +60,7 @@ export default function Posts({
               className="px-[15px] text-center w-full max-w-full md:text-right md:flex-[0_0_auto] md:w-1/2"
             >
               <Link
-                href={"/blogs"}
+                href={"/bloglar"}
                 className="group border-b-0 p-0 normal-case relative border-0 tracking-[0] bg-transparent text-[--dark-gray2] rounded-none w-auto transition-all duration-300 ease-in-out font-medium inline-block text-18 leading-[--bs-btn-line-height] text-center align-middle cursor-pointer select-none"
               >
                 <span className="inline-flex items-center">

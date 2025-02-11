@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div>
       <Banner
-        title="Portfolio"
+        title="Projelerimiz"
         text="Our skilled developers and designers make sure to deliver tried-tested efficient and robust designs."
       />
       <Gallery />
