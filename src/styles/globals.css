@@ -60,6 +60,7 @@
   --bs-body-bg: #fff;
   --yellow: #ffea23;
   --light-red: #c8b2ab;
+  --very-light-gray: #f7f7f7;
   --bs-body-color: #212529;
   --nero-gray: #1e1d1d;
   --dark-gray: #1d1d1d;
@@ -140,6 +141,14 @@ h5 {
   margin-bottom: 30px;
   letter-spacing: -0.5px;
   margin-top: 0;
+}
+
+h6 {
+  font-size: 1.75rem;
+  line-height: 1.95rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
 }
 
 ul {
@@ -234,6 +243,14 @@ ul {
   section {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 25px;
   }
 }
 

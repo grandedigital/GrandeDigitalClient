@@ -1,3 +1,4 @@
+import Comments from "@/components/blog/comments";
 import Content1 from "@/components/blog/content1";
 import Content2 from "@/components/blog/content2";
 import Content3 from "@/components/blog/content3";
@@ -19,6 +20,7 @@ export default function Page() {
       <Content3 />
       <Section1 />
       <Posts isNavigateButtonActive={true} />
+      <Comments />
     </div>
   );
 }
