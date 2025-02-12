@@ -32,7 +32,7 @@ export default function OurTeam() {
             window.innerHeight + elementPos.height,
             1,
             1.2
-          )
+          ) || 1
         );
         setSidePhotosTranslateY(
           mapValue(
@@ -41,7 +41,7 @@ export default function OurTeam() {
             window.innerHeight + elementPos.height,
             -30,
             30
-          )
+          ) || -30
         );
         setSidePhotesScale(
           mapValue(
@@ -50,7 +50,7 @@ export default function OurTeam() {
             window.innerHeight + elementPos.height,
             1,
             0.7
-          )
+          ) || 1
         );
       }
     };
