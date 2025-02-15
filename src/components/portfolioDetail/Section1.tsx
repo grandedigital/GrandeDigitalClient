@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Section1() {
   return (
-    <section className="bg-[url('/images/portfolio-single-minimal-10.jpg')] mt-[inherit] pt-[11%] bg-cover bg-center relative bg-no-repeat overflow-hidden max-2xl:pb-[90px] max-lgx:pt-[15%] max-mdx:pt-[5%] max-mdx:pb-[75px] max-md:pb-[50px]">
+    <section className="bg-[url('/images/portfolio-single-minimal-10.jpg')] mt-[inherit] pt-[11%] bg-cover bg-center relative bg-no-repeat overflow-hidden max-2xl:pb-[90px] max-lgx:pt-[15%] max-mdx:pb-[75px] max-md:pb-[50px]">
       <div className="custom-container">
         <div className="row items-center justify-between">
           <div className="px-[15px] text-center flex-[0_0_auto] w-full max-w-full md:text-left md:w-1/2 mdx:w-[41.66666667%] max-md:mb-[40px] max-md:mt-[30px]">
