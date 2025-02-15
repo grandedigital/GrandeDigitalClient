@@ -54,8 +54,8 @@ export default function Section1() {
         Math.abs(mouseX),
         0,
         numberAndPlusBoundingClientRect.width,
-        25,
-        -25
+        -25,
+        25
       ) || 0
     );
     setNumberAndPlusTranslateYValue(
@@ -63,8 +63,8 @@ export default function Section1() {
         Math.abs(mouseY),
         0,
         numberAndPlusBoundingClientRect.height,
-        25,
-        -25
+        -25,
+        25
       ) || 0
     );
 
@@ -73,8 +73,8 @@ export default function Section1() {
         Math.abs(mouseY),
         0,
         numberAndPlusBoundingClientRect.height,
-        15,
-        -15
+        -15,
+        15
       ) || 0
     );
     setNumberAndPlusRotateYValue(
@@ -82,8 +82,8 @@ export default function Section1() {
         Math.abs(mouseX),
         0,
         numberAndPlusBoundingClientRect.width,
-        -15,
-        15
+        15,
+        -15
       ) || 0
     );
   };
@@ -100,6 +100,16 @@ export default function Section1() {
       setNumberAndPlusAnimationCompleted(true);
     }
   };
+
+  useEffect(() => {
+    if (onlyNumberAndPlusContainerRef.current)
+      setNumberAndPlusBoundingClientRect({
+        width:
+          onlyNumberAndPlusContainerRef.current.getBoundingClientRect().width,
+        height:
+          onlyNumberAndPlusContainerRef.current.getBoundingClientRect().height,
+      });
+  }, []);
 
   if (!shouldAnimate) {
     return (
