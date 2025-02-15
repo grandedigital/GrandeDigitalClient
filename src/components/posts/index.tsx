@@ -27,7 +27,7 @@ export default function Posts({
 
   if (!shouldAnimate) {
     return (
-      <section className="pb-0 max-2xl:pt-[90px] max-mdx:pt-[75px] max-md:pt-[50px]">
+      <section className="pb-0 max-2xl:pt-[90px] max-mdx:pt-[75px]">
         <div className="custom-container">
           <div ref={titleAndLinkRef} className="row mb-[4%]">
             <div className="px-[15px] text-center w-full max-w-full md:text-left md:flex-[0_0_auto] md:w-1/2 max-md:mb-[20px]">
@@ -188,7 +188,7 @@ export default function Posts({
   }
 
   return (
-    <section className="pb-0 max-2xl:pt-[90px] max-mdx:pt-[75px] max-md:pt-[50px]">
+    <section className="pb-0 max-2xl:pt-[90px] max-mdx:pt-[75px]">
       <div className="custom-container">
         <div ref={titleAndLinkRef} className="row mb-[4%]">
           <motion.div
