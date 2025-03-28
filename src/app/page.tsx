@@ -17,7 +17,7 @@ export default function Home() {
       <Gallery title="Neler Yaptık" />
       <Section3 />
       <Section4 />
-      <Posts isNavigateButtonActive={true} />
+      {/* <Posts isNavigateButtonActive={true} /> */}
       <Marquee />
     </div>
   );

@@ -163,7 +163,7 @@ export default function Section1() {
               </div>
             </div>
           </div>
-          <div className="row justify-center">
+          {/* <div className="row justify-center">
             <div className="pr-[5%] pl-[15px] flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[33.33333333%] max-mdx:mb-[30px]">
               <div className="mb-[30px] w-full bg-[--extra-medium-gray] h-[1px] hidden mdx:block"></div>
               <div className="flex flex-row flex-wrap items-stretch justify-start text-left relative z-1">
@@ -227,7 +227,7 @@ export default function Section1() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     );
@@ -346,7 +346,7 @@ export default function Section1() {
             </div>
           </div>
         </div>
-        <div ref={bottomPropRef} className="row justify-center">
+        {/* <div ref={bottomPropRef} className="row justify-center">
           <motion.div
             initial={
               shouldAnimate && {
@@ -461,7 +461,7 @@ export default function Section1() {
               </div>
             </div>
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

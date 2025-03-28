@@ -191,7 +191,7 @@ export default function Section2({
                 }
                 <br />
                 <Link
-                  href={"#"}
+                  href={"/iletisim"}
                   className="border-b border-solid text-[--base-color]"
                 >
                   Şimdi bizimle iletişime geçin, en etkili çözümleri sunalım.
@@ -434,7 +434,7 @@ export default function Section2({
               }
               <br />
               <Link
-                href={"#"}
+                href={"/iletisim"}
                 className="border-b border-solid text-[--base-color]"
               >
                 Şimdi bizimle iletişime geçin, en etkili çözümleri sunalım.

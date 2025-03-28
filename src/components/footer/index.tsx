@@ -1,6 +1,7 @@
 import Link from "next/link";
 import EmailForm from "./emailForm";
 import { FaRegHandshake } from "react-icons/fa6";
+import { BsTwitterX, BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -20,37 +21,39 @@ export default function Footer() {
                 <li className="ml-0 mr-[5px] inline-block list-none max-md:mb-0">
                   <Link
                     target="_blank"
-                    href={"#"}
+                    rel="nofollow"
+                    href={"https://www.facebook.com/grndigital"}
                     className="text-[--dark-gray2] w-auto h-auto leading-normal text-center flex items-center justify-center duration-300 ease-[cubic-bezier(.12,0,.39,0)] text-18"
                   >
-                    Fb.
+                    <BsFacebook size={22} />
                   </Link>
                 </li>
-                <li className="ml-[5px] mr-[5px] inline-block list-none max-md:mb-0">
+                {/* <li className="ml-[5px] mr-[5px] inline-block list-none max-md:mb-0">
                   <Link
                     target="_blank"
                     href={"#"}
                     className="text-[--dark-gray2] w-auto h-auto leading-normal text-center flex items-center justify-center duration-300 ease-[cubic-bezier(.12,0,.39,0)] text-18"
                   >
-                    Ig.
+                    <BsInstagram size={22} />
                   </Link>
-                </li>
-                <li className="ml-[5px] mr-[5px] inline-block list-none max-md:mb-0">
+                </li> */}
+                {/* <li className="ml-[5px] mr-[5px] inline-block list-none max-md:mb-0">
                   <Link
                     target="_blank"
                     href={"#"}
                     className="text-[--dark-gray2] w-auto h-auto leading-normal text-center flex items-center justify-center duration-300 ease-[cubic-bezier(.12,0,.39,0)] text-18"
                   >
-                    Tw.
+                    <BsTwitterX size={22} />
                   </Link>
-                </li>
+                </li> */}
                 <li className="ml-[5px] mr-0 inline-block list-none max-md:mb-0">
                   <Link
                     target="_blank"
-                    href={"#"}
+                    rel="nofollow"
+                    href={"https://tr.linkedin.com/company/grande-digital"}
                     className="text-[--dark-gray2] w-auto h-auto leading-normal text-center flex items-center justify-center duration-300 ease-[cubic-bezier(.12,0,.39,0)] text-18"
                   >
-                    Be.
+                    <BsLinkedin size={22} />
                   </Link>
                 </li>
               </ul>

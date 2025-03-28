@@ -27,7 +27,7 @@ export default function Brands({ toPage = "homepage" }) {
               <div className="ease-[cubic-bezier(.12,0,.39,0)] duration-300 transition-all px-[15px] text-center flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[20%] md:flex-[0_0_auto] md:w-[33.33333333%] xsm:flex-[0_0_auto] xsm:w-[50%] max-mdx:mb-[40px]">
                 <Link href={"#"} className="">
                   <img
-                    className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
+                    className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
                     src="/images/akaydinref.png"
                     alt=""
                   />
@@ -36,8 +36,8 @@ export default function Brands({ toPage = "homepage" }) {
               <div className="ease-[cubic-bezier(.12,0,.39,0)] duration-300 transition-all px-[15px] text-center flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[20%] md:flex-[0_0_auto] md:w-[33.33333333%] xsm:flex-[0_0_auto] xsm:w-[50%] max-mdx:mb-[40px]">
                 <Link href={"#"} className="">
                   <img
-                    className="max-w-[inherit] h-[40px] max-xsm:inline-flex w-full"
-                    src="/images/logo-invision-dark-gray.svg"
+                    className="max-w-[inherit] h-[40px] max-xsm:inline-flex"
+                    src="/images/gdmenuref.svg"
                     alt=""
                   />
                 </Link>
@@ -45,8 +45,8 @@ export default function Brands({ toPage = "homepage" }) {
               <div className="ease-[cubic-bezier(.12,0,.39,0)] duration-300 transition-all px-[15px] text-center flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[20%] md:flex-[0_0_auto] md:w-[33.33333333%] xsm:flex-[0_0_auto] xsm:w-[50%] max-mdx:mb-[40px]">
                 <Link href={"#"} className="">
                   <img
-                    className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                    src="/images/logo-netflix-dark-gray.svg"
+                    className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+                    src="/images/labirentreff.webp"
                     alt=""
                   />
                 </Link>
@@ -54,8 +54,8 @@ export default function Brands({ toPage = "homepage" }) {
               <div className="ease-[cubic-bezier(.12,0,.39,0)] duration-300 transition-all px-[15px] text-center flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[20%] md:flex-[0_0_auto] md:w-[33.33333333%] xsm:flex-[0_0_auto] xsm:w-[50%] max-mdx:mb-0 max-md:mb-[40px]">
                 <Link href={"#"} className="">
                   <img
-                    className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                    src="/images/logo-logitech-dark-gray.svg"
+                    className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+                    src="/images/mororef.svg"
                     alt=""
                   />
                 </Link>
@@ -64,7 +64,7 @@ export default function Brands({ toPage = "homepage" }) {
                 <Link href={"#"} className="">
                   <img
                     className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                    src="/images/logo-amazon-dark-gray.svg"
+                    src="/images/limoref.svg"
                     alt=""
                   />
                 </Link>
@@ -82,8 +82,8 @@ export default function Brands({ toPage = "homepage" }) {
           <div className="ease-[cubic-bezier(.12,0,.39,0)] duration-300 transition-all px-[15px] text-center flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[20%] md:flex-[0_0_auto] md:w-[33.33333333%] xsm:flex-[0_0_auto] xsm:w-[50%] max-mdx:mb-[40px]">
             <Link href={"#"} className="">
               <img
-                className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                src="/images/logo-walmart-dark-gray.svg"
+                className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+                src="/images/akaydinref.png"
                 alt=""
               />
             </Link>
@@ -91,8 +91,8 @@ export default function Brands({ toPage = "homepage" }) {
           <div className="ease-[cubic-bezier(.12,0,.39,0)] duration-300 transition-all px-[15px] text-center flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[20%] md:flex-[0_0_auto] md:w-[33.33333333%] xsm:flex-[0_0_auto] xsm:w-[50%] max-mdx:mb-[40px]">
             <Link href={"#"} className="">
               <img
-                className="max-w-[inherit] h-[40px] max-xsm:inline-flex w-full"
-                src="/images/logo-invision-dark-gray.svg"
+                className="max-w-[inherit] h-[40px] max-xsm:inline-flex"
+                src="/images/gdmenuref.svg"
                 alt=""
               />
             </Link>
@@ -100,8 +100,8 @@ export default function Brands({ toPage = "homepage" }) {
           <div className="ease-[cubic-bezier(.12,0,.39,0)] duration-300 transition-all px-[15px] text-center flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[20%] md:flex-[0_0_auto] md:w-[33.33333333%] xsm:flex-[0_0_auto] xsm:w-[50%] max-mdx:mb-[40px]">
             <Link href={"#"} className="">
               <img
-                className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                src="/images/logo-netflix-dark-gray.svg"
+                className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+                src="/images/labirentreff.webp"
                 alt=""
               />
             </Link>
@@ -109,8 +109,8 @@ export default function Brands({ toPage = "homepage" }) {
           <div className="ease-[cubic-bezier(.12,0,.39,0)] duration-300 transition-all px-[15px] text-center flex-[0_0_auto] w-full max-w-full mdx:flex-[0_0_auto] mdx:w-[20%] md:flex-[0_0_auto] md:w-[33.33333333%] xsm:flex-[0_0_auto] xsm:w-[50%] max-mdx:mb-0 max-md:mb-[40px]">
             <Link href={"#"} className="">
               <img
-                className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                src="/images/logo-logitech-dark-gray.svg"
+                className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+                src="/images/mororef.svg"
                 alt=""
               />
             </Link>
@@ -119,7 +119,7 @@ export default function Brands({ toPage = "homepage" }) {
             <Link href={"#"} className="">
               <img
                 className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                src="/images/logo-amazon-dark-gray.svg"
+                src="/images/limoref.svg"
                 alt=""
               />
             </Link>
@@ -179,7 +179,7 @@ export default function Brands({ toPage = "homepage" }) {
                       opacity: bransViewArea ? 1 : 0,
                     }
                   }
-                  className="max-w-[inherit] h-[40px] max-xsm:inline-flex w-full"
+                  className="max-w-[inherit] h-[40px] max-xsm:inline-flex"
                   src="/images/gdmenuref.svg"
                   alt=""
                 />
@@ -227,7 +227,7 @@ export default function Brands({ toPage = "homepage" }) {
                       opacity: bransViewArea ? 1 : 0,
                     }
                   }
-                  className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
+                  className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
                   src="/images/mororef.svg"
                   alt=""
                 />
@@ -285,8 +285,8 @@ export default function Brands({ toPage = "homepage" }) {
                   opacity: bransViewArea ? 1 : 0,
                 }
               }
-              className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-              src="/images/logo-walmart-dark-gray.svg"
+              className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+              src="/images/akaydinref.png"
               alt=""
             />
           </Link>
@@ -309,8 +309,8 @@ export default function Brands({ toPage = "homepage" }) {
                   opacity: bransViewArea ? 1 : 0,
                 }
               }
-              className="max-w-[inherit] h-[40px] max-xsm:inline-flex w-full"
-              src="/images/logo-invision-dark-gray.svg"
+              className="max-w-[inherit] h-[40px] max-xsm:inline-flex"
+              src="/images/gdmenuref.svg"
               alt=""
             />
           </Link>
@@ -333,8 +333,8 @@ export default function Brands({ toPage = "homepage" }) {
                   opacity: bransViewArea ? 1 : 0,
                 }
               }
-              className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-              src="/images/logo-netflix-dark-gray.svg"
+              className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+              src="/images/labirentreff.webp"
               alt=""
             />
           </Link>
@@ -357,8 +357,8 @@ export default function Brands({ toPage = "homepage" }) {
                   opacity: bransViewArea ? 1 : 0,
                 }
               }
-              className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-              src="/images/logo-logitech-dark-gray.svg"
+              className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+              src="/images/mororef.svg"
               alt=""
             />
           </Link>
@@ -382,7 +382,7 @@ export default function Brands({ toPage = "homepage" }) {
                 }
               }
               className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-              src="/images/logo-amazon-dark-gray.svg"
+              src="/images/limoref.svg"
               alt=""
             />
           </Link>

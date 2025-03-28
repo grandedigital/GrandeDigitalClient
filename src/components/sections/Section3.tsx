@@ -58,7 +58,7 @@ export default function Section3() {
                   {" verilerini stratejik bir şekilde birleştiriyoruz."}
                 </p>
                 <Link
-                  href={"#"}
+                  href={"/iletisim"}
                   className="bg-[--dark-gray2] text-white text-[14px] py-[18px] px-[34px] border-2 border-solid border-transparent rounded-none uppercase tracking-[.5px] w-auto font-spaceGrotesk transition-all duration-300 ease-in-out [box-shadow:0_5px_20px_rgba(0,0,0,.1)] font-medium inline-block max-md:text-[13px] max-md:py-[16px] max-md:px-[36px] hover:translate-y-[-3px]"
                 >
                   {"HEMEN BAŞLA"}
@@ -70,7 +70,7 @@ export default function Section3() {
               <div ref={statsAreaRef} className="mx-0 flex flex-wrap">
                 <div className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r">
                   <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
-                    Users on marketplaces we've created in 2023.
+                    2009 yılından beri iletişime geçilen müşteri
                   </p>
                   <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
                     <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
@@ -90,7 +90,7 @@ export default function Section3() {
                     <span className="w-full h-auto">
                       {
                         <SlotCounter
-                          value={8500}
+                          value={2000}
                           duration={1.5}
                           startValue={"0000"}
                         />
@@ -101,7 +101,7 @@ export default function Section3() {
                 </div>
                 <div className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b border-r flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r">
                   <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
-                    Successfully finished projects with creativity.
+                    Başarıyla tamamlanmış proje
                   </p>
                   <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
                     <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
@@ -121,9 +121,9 @@ export default function Section3() {
                     <span className="w-full h-auto">
                       {
                         <SlotCounter
-                          value={660}
+                          value={50}
                           duration={1.5}
-                          startValue={"000"}
+                          startValue={"00"}
                         />
                       }
                       +
@@ -132,7 +132,7 @@ export default function Section3() {
                 </div>
                 <div className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r">
                   <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
-                    Monthly visitors on our e-Commerce platform.
+                    E-Ticaret platformumuzu aylık ziyaret edenler.
                   </p>
                   <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
                     <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
@@ -163,7 +163,7 @@ export default function Section3() {
                 </div>
                 <div className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-r border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r">
                   <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
-                    Onboarding conversions growth increased.
+                    Destek Verilen Sektörler ve Hizmet Kategorileri
                   </p>
                   <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
                     <sup className="top-0 relative text-[.75em] leading-[0] align-baseline">
@@ -183,9 +183,9 @@ export default function Section3() {
                     <span className="w-full h-auto">
                       {
                         <SlotCounter
-                          value={300}
+                          value={15}
                           duration={1.5}
-                          startValue={"000"}
+                          startValue={"0"}
                         />
                       }
                       +
@@ -246,7 +246,7 @@ export default function Section3() {
                 {" verilerini stratejik bir şekilde birleştiriyoruz."}
               </p>
               <Link
-                href={"#"}
+                href={"/iletisim"}
                 className="bg-[--dark-gray2] text-white text-[14px] py-[18px] px-[34px] border-2 border-solid border-transparent rounded-none uppercase tracking-[.5px] w-auto font-spaceGrotesk transition-all duration-300 ease-in-out [box-shadow:0_5px_20px_rgba(0,0,0,.1)] font-medium inline-block max-md:text-[13px] max-md:py-[16px] max-md:px-[36px] hover:translate-y-[-3px]"
               >
                 {"HEMEN BAŞLA"}
@@ -265,7 +265,7 @@ export default function Section3() {
                 className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
               >
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
-                  Users on marketplaces we've created in 2023.
+                  2009 yılından beri iletişime geçilen müşteri
                 </p>
                 {statsAreaViewArea && (
                   <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
@@ -286,7 +286,7 @@ export default function Section3() {
                     <span className="w-full h-auto">
                       {
                         <SlotCounter
-                          value={8500}
+                          value={2000}
                           duration={1.5}
                           startValue={"0000"}
                         />
@@ -305,7 +305,7 @@ export default function Section3() {
                 className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid border-b border-r flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
               >
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
-                  Successfully finished projects with creativity.
+                  Başarıyla tamamlanmış proje
                 </p>
                 {statsAreaViewArea && (
                   <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
@@ -326,9 +326,9 @@ export default function Section3() {
                     <span className="w-full h-auto">
                       {
                         <SlotCounter
-                          value={660}
+                          value={50}
                           duration={1.5}
-                          startValue={"000"}
+                          startValue={"00"}
                         />
                       }
                       +
@@ -345,7 +345,7 @@ export default function Section3() {
                 className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
               >
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
-                  Monthly visitors on our e-Commerce platform.
+                  E-Ticaret platformumuzu aylık ziyaret edenler.
                 </p>
                 {statsAreaViewArea && (
                   <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
@@ -385,7 +385,7 @@ export default function Section3() {
                 className="pl-[60px] pb-[30px] pr-[60px] pt-[40px] border-[--bs-border-color] border-l border-r border-solid flex-[0_0_auto] w-full max-w-full md:w-1/2 max-lgx:pl-[40px] max-lgx:pr-[40px] max-lgx:pt-[30px] max-md:border-r"
               >
                 <p className="font-medium mb-[30%] w-[85%] text-[--dark-gray2] text-[19px] mt-0 max-md:mb-[15%]">
-                  Onboarding conversions growth increased.
+                  Destek Verilen Sektörler ve Hizmet Kategorileri
                 </p>
                 {statsAreaViewArea && (
                   <h2 className="font-bold mt-[20%] tracking-[-2px] text-[--dark-gray2] font-spaceGrotesk inline-flex mb-[30px] max-md:mb-0">
@@ -406,9 +406,9 @@ export default function Section3() {
                     <span className="w-full h-auto">
                       {
                         <SlotCounter
-                          value={300}
+                          value={15}
                           duration={1.5}
-                          startValue={"000"}
+                          startValue={"0"}
                         />
                       }
                       +
