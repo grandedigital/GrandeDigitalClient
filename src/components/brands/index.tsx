@@ -28,7 +28,7 @@ export default function Brands({ toPage = "homepage" }) {
                 <Link href={"#"} className="">
                   <img
                     className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                    src="/images/logo-walmart-dark-gray.svg"
+                    src="/images/akaydinref.png"
                     alt=""
                   />
                 </Link>
@@ -155,8 +155,8 @@ export default function Brands({ toPage = "homepage" }) {
                       opacity: bransViewArea ? 1 : 0,
                     }
                   }
-                  className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                  src="/images/logo-walmart-dark-gray.svg"
+                  className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+                  src="/images/akaydinref.png"
                   alt=""
                 />
               </Link>
@@ -180,7 +180,7 @@ export default function Brands({ toPage = "homepage" }) {
                     }
                   }
                   className="max-w-[inherit] h-[40px] max-xsm:inline-flex w-full"
-                  src="/images/logo-invision-dark-gray.svg"
+                  src="/images/gdmenuref.svg"
                   alt=""
                 />
               </Link>
@@ -203,8 +203,8 @@ export default function Brands({ toPage = "homepage" }) {
                       opacity: bransViewArea ? 1 : 0,
                     }
                   }
-                  className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                  src="/images/logo-netflix-dark-gray.svg"
+                  className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+                  src="/images/labirentreff.webp"
                   alt=""
                 />
               </Link>
@@ -228,7 +228,7 @@ export default function Brands({ toPage = "homepage" }) {
                     }
                   }
                   className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                  src="/images/logo-logitech-dark-gray.svg"
+                  src="/images/mororef.svg"
                   alt=""
                 />
               </Link>
@@ -251,8 +251,8 @@ export default function Brands({ toPage = "homepage" }) {
                       opacity: bransViewArea ? 1 : 0,
                     }
                   }
-                  className="max-w-[inherit] h-[35px] max-xsm:inline-flex w-full"
-                  src="/images/logo-amazon-dark-gray.svg"
+                  className="max-w-[inherit] h-[35px] max-xsm:inline-flex"
+                  src="/images/limoref.svg"
                   alt=""
                 />
               </Link>

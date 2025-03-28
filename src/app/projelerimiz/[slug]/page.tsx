@@ -5,16 +5,32 @@ import Section3 from "@/components/portfolioDetail/Section3";
 import Section4 from "@/components/portfolioDetail/Section4";
 import Section5 from "@/components/portfolioDetail/Section5";
 import MarqueeText from "@/components/sections/marqueeText";
+import projects from "@/data/projects.json"
+import { notFound } from "next/navigation";
 
-export default function Page() {
+export default async function Page({ params }: { params?: any }) {
+  const { slug } = await params
+  const data = projects.find((itm) => itm.slug === slug)
+  if (!data) {
+    notFound()
+  }
   return (
     <div>
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <DetailGallery />
+      <Section1 data={data} />
+      <Section2 data={data} />
+      <Section3 data={data} />
+      {
+        data?.detailPhoto2 &&
+        <Section4 data={data} />
+      }
+      {
+        data?.detailPhoto2Desc1 &&
+        <Section5 data={data} />
+      }
+      {
+        data?.galleryPhoto1 &&
+        <DetailGallery data={data} />
+      }
       <MarqueeText />
     </div>
   );

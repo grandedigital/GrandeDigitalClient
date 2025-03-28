@@ -82,7 +82,7 @@ export default function GalleryItem({ data }: { data: any }) {
       }}
     >
       <Link
-        href="/projelerimiz/detail"
+        href={`/projelerimiz/${data?.slug}`}
         className="absolute left-0 top-0 w-full h-full py-[40px] z-[3]"
       >
         <div className="absolute w-full h-full left-0 top-0 py-[40px] opacity-100 items-center justify-end flex flex-col max-md:py-[30px]">

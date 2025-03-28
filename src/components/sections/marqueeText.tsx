@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 
 export default function MarqueeText() {
   const [speed, setSpeed] = useState(70);
-  const words = ["marketing.", "analysis.", "strategy.", "business."];
+  const words = ["pazarlama.", "analiz.", "strateji.", "işletme."];
 
   useEffect(() => {
     // Ekran boyutunu kontrol et ve speed değerini buna göre ayarla
