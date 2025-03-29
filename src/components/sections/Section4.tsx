@@ -38,10 +38,10 @@ export default function Section4({
             </div>
           </div>
           <div ref={bottomPropsRef} className="mx-[-15px] flex flex-wrap gap-y-7">
-            <div className="px-[15px] md:w-[12.5%] flex-[0_0_auto] max-w-full mdx:w-w-[12.5%] md:w-[12.5%]">
+            <div className="px-[15px] md:w-[12.5%] flex-[0_0_auto] max-w-full mdx:w-[12.5%] md:w-[12.5%]">
               <Link href={"#"}>
                 <img
-                  className="max-w-full h-auto w-[100px]"
+                  className="max-w-full h-auto w-[50px] md:w-[100px]"
                   src="/images/html.png"
                   alt=""
                 />
@@ -50,7 +50,7 @@ export default function Section4({
             <div className="px-[15px] md:w-[12.5%] flex-[0_0_auto] max-w-full mdx:w-[12.5%] md:w-[12.5%]">
               <Link href={"#"}>
                 <img
-                  className="max-w-full h-auto w-[100px]"
+                  className="max-w-full h-auto w-[50px] md:w-[100px]"
                   src="/images/css.svg"
                   alt=""
                 />
@@ -59,7 +59,7 @@ export default function Section4({
             <div className="px-[15px] md:w-[12.5%] flex-[0_0_auto] max-w-full mdx:w-[12.5%] md:w-[12.5%]">
               <Link href={"#"}>
                 <img
-                  className="max-w-full h-auto w-[100px]"
+                  className="max-w-full h-auto w-[50px] md:w-[100px]"
                   src="/images/js.png"
                   alt=""
                 />
@@ -68,7 +68,7 @@ export default function Section4({
             <div className="px-[15px] md:w-[12.5%] flex-[0_0_auto] max-w-full mdx:w-[12.5%] md:w-[12.5%]">
               <Link href={"#"}>
                 <img
-                  className="max-w-full h-auto w-[100px]"
+                  className="max-w-full h-auto w-[50px] md:w-[100px]"
                   src="/images/react.webp"
                   alt=""
                 />
@@ -80,7 +80,7 @@ export default function Section4({
             <div className="px-[15px] md:w-[12.5%] flex-[0_0_auto] max-w-full mdx:w-[12.5%] md:w-[12.5%]">
               <Link href={"#"}>
                 <img
-                  className="max-w-full h-auto w-[100px]"
+                  className="max-w-full h-auto w-[50px] md:w-[100px]"
                   src="/images/csharp.png"
                   alt=""
                 />
@@ -89,7 +89,7 @@ export default function Section4({
             <div className="px-[15px] md:w-[12.5%] flex-[0_0_auto] max-w-full mdx:w-[12.5%] md:w-[12.5%]">
               <Link href={"#"}>
                 <img
-                  className="max-w-full h-auto w-[100px]"
+                  className="max-w-full h-auto w-[50px] md:w-[100px]"
                   src="/images/nodejs.png"
                   alt=""
                 />
@@ -150,7 +150,7 @@ export default function Section4({
           >
             <Link href={"#"}>
               <img
-                className="max-w-full h-auto w-[100px]"
+                className="max-w-full h-auto w-[50px] md:w-[100px]"
                 src="/images/html.png"
                 alt=""
               />
@@ -169,7 +169,7 @@ export default function Section4({
           >
             <Link href={"#"}>
               <img
-                className="max-w-full h-[100px] w-[100px]"
+                className="max-w-full h-[100px] w-[50px] md:w-[100px]"
                 src="/images/css.svg"
                 alt=""
               />
@@ -188,7 +188,7 @@ export default function Section4({
           >
             <Link href={"#"}>
               <img
-                className="max-w-full h-auto w-[100px]"
+                className="max-w-full h-auto w-[50px] md:w-[100px]"
                 src="/images/js.png"
                 alt=""
               />
@@ -207,7 +207,7 @@ export default function Section4({
           >
             <Link href={"#"}>
               <img
-                className="max-w-full h-auto w-[100px]"
+                className="max-w-full h-auto w-[50px] md:w-[100px]"
                 src="/images/react.webp"
                 alt=""
               />
@@ -229,7 +229,7 @@ export default function Section4({
           >
             <Link href={"#"}>
               <img
-                className="max-w-full h-auto w-[100px]"
+                className="max-w-full h-auto w-[50px] md:w-[100px]"
                 src="/images/csharp.png"
                 alt=""
               />
@@ -248,7 +248,7 @@ export default function Section4({
           >
             <Link href={"#"}>
               <img
-                className="max-w-full h-auto w-[100px]"
+                className="max-w-full h-auto w-[50px] md:w-[100px]"
                 src="/images/nodejs.png"
                 alt=""
               />

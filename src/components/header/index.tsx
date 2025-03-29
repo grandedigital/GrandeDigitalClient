@@ -48,7 +48,7 @@ export default function Header() {
               className="mr-0 align-middle py-[30px] px-[0] inline-block text-[0] text-[--bs-navbar-brand-color] no-underline whitespace-nowrap max-mdx:py-[22px] max-mdx:px-[0]"
             >
               <img
-                src="/images/demo-branding-agency-logo-black.webp"
+                src="/images/grandeLogo.png"
                 alt="logo"
                 className="visible opacity-100 w-auto max-h-[34px] max-w-[100%] h-auto"
               />

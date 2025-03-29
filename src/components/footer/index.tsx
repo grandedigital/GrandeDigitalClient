@@ -12,7 +12,7 @@ export default function Footer() {
             <Link href={"#"} className="inline-block max-lgx:mb-[30px]">
               <img
                 className="max-h-[48px] max-w-full h-auto"
-                src="/images/demo-branding-agency-logo-black.webp"
+                src="/images/grandeLogo.png"
                 alt=""
               />
             </Link>
