@@ -45,12 +45,12 @@ export default function Header() {
           <div className="py-0 px-[15px] flex self-stretch mr-auto mdx:mr-0 flex-[0_0_auto] mdx:w-[16.66666667%] w-auto">
             <Link
               href={"/"}
-              className="mr-0 align-middle py-[30px] px-[0] inline-block text-[0] text-[--bs-navbar-brand-color] no-underline whitespace-nowrap max-mdx:py-[22px] max-mdx:px-[0]"
+              className="mr-0 align-middle py-[20px] px-[0] inline-block text-[0] text-[--bs-navbar-brand-color] no-underline whitespace-nowrap max-mdx:py-[22px] max-mdx:px-[0]"
             >
               <img
                 src="/images/grandeLogo.png"
                 alt="logo"
-                className="visible opacity-100 w-auto max-h-[34px] max-w-[100%] h-auto"
+                className="visible opacity-100 w-auto max-h-[53px] max-w-[100%] h-auto"
               />
             </Link>
           </div>
