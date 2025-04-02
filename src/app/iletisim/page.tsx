@@ -9,10 +9,12 @@ export default function Page() {
       <Banner
         title={"İletişim"}
         text={
-          "We're here to here answer any question you may have. Let us help you get your project started."
+          "Dijital dünyadaki varlığınızı güçlendirmek ve markanızı bir adım öne taşımak için bize ulaşın!"
         }
       />
-      <Section1 />
+      <Section1
+        text={"Size yardımcı olmak ve sorularınızı yanıtlamak için buradayız."}
+      />
       <MapAndForm />
       <MarqueeText />
     </div>

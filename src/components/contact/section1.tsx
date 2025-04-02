@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useResponsiveAnimation } from "@/hooks/useResponsiveAnimation";
 
-export default function Section1() {
+export default function Section1({ text }: { text: String }) {
   const h2TextRef = useRef(null);
   const itemsRef = useRef(null);
 
@@ -32,7 +32,7 @@ export default function Section1() {
                 ref={h2TextRef}
                 className="font-semibold w-[95%] tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk text-center mb-0 mdx:text-left max-mdx:w-full"
               >
-                We're here to help you and answer any questions you might have.
+                {text}
               </h2>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function Section1() {
                 </div>
                 <div>
                   <span className="font-semibold mb-[5px] text-[--dark-gray2] text-19 block">
-                    Let's talk with us
+                    Bizi Ara
                   </span>
                   <div className="w-full block">
                     <span className="block">
@@ -126,10 +126,10 @@ export default function Section1() {
                 </div>
                 <div>
                   <span className="font-semibold mb-[5px] text-[--dark-gray2] text-19 block">
-                    Join our team
+                    Bizimle Çalışın
                   </span>
                   <p className="mb-0 w-[80%] mx-auto mt-0 max-xxl:w-full max-mdx:w-[75%]">
-                    Lorem ipsum is simply the printing typesetting.
+                    Kariyerinizi bir adım ileri taşıyın. Ekibimize katılın!
                   </p>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function Section1() {
               ref={h2TextRef}
               className="font-semibold w-[95%] tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk text-center mb-0 mdx:text-left max-mdx:w-full"
             >
-              We're here to help you and answer any questions you might have.
+              {text}
             </motion.h2>
           </div>
         </div>
@@ -248,7 +248,7 @@ export default function Section1() {
               </div>
               <div>
                 <span className="font-semibold mb-[5px] text-[--dark-gray2] text-19 block">
-                  Let's talk with us
+                  Bizi Ara
                 </span>
                 <div className="w-full block">
                   <span className="block">
@@ -257,10 +257,10 @@ export default function Section1() {
                       href={"tel:05382403883"}
                       className="transition-all duration-300 text-[--medium-gray] hover:text-[--dark-gray2]"
                     >
-                      05382403883
+                      538 240 38 83
                     </Link>
                   </span>
-                  <span className="block">Fax: 1-800-222-002</span>
+                  {/* <span className="block">Fax: 1-800-222-002</span> */}
                 </div>
               </div>
             </div>
@@ -286,10 +286,10 @@ export default function Section1() {
               </div>
               <div>
                 <span className="font-semibold mb-[5px] text-[--dark-gray2] text-19 block">
-                  Join our team
+                  Bizimle Çalışın
                 </span>
                 <p className="mb-0 w-[80%] mx-auto mt-0 max-xxl:w-full max-mdx:w-[75%]">
-                  Lorem ipsum is simply the printing typesetting.
+                  Kariyerinizi bir adım ileri taşıyın. Ekibimize katılın!
                 </p>
               </div>
             </div>

@@ -194,7 +194,7 @@ export default function MapAndForm({
                       onBlur={handleBlurNameInput}
                       value={name}
                       type="text"
-                      placeholder="Enter your name*"
+                      placeholder="İsminizi girin*"
                       autoComplete="off"
                       name="name"
                       className="outline-0 border-solid border-b [background:_0_0] border-[--light-red] rounded-none py-[12px] px-[25px] w-full max-w-full resize-none text-16 text-[--medium-gray] placeholder-[--medium-gray] leading-[inherit] break-normal transition-all duration-300 bg-transparent pl-0 appearance-none block m-0 "
@@ -222,7 +222,7 @@ export default function MapAndForm({
                       onBlur={handleBlurEmailInput}
                       value={email}
                       type="text"
-                      placeholder="Enter your email*"
+                      placeholder="E-posta adresinizi girin*"
                       autoComplete="off"
                       name="email"
                       className="placeholder-[--medium-gray] outline-0 border-solid border-b [background:_0_0] border-[--light-red] rounded-none py-[12px] px-[25px] w-full max-w-full resize-none text-16 text-[--medium-gray] leading-[inherit] break-normal transition-all duration-300 bg-transparent pl-0 appearance-none block m-0"
@@ -248,7 +248,7 @@ export default function MapAndForm({
                     <textarea
                       name="comment"
                       rows={3}
-                      placeholder="Enter your message"
+                      placeholder="Mesajınız"
                       autoComplete="off"
                       className="placeholder-[--medium-gray] resize-none outline-0 border-b border-solid [background:_0_0] border-[--light-red] rounded-none py-[12px] px-[25px] w-full max-w-full text-16 text-[--medium-gray] leading-[inherit] break-words transition-all duration-300 bg-transparent pl-0 appearance-none block m-0"
                       style={{ backgroundPosition: "right 35px center" }}
@@ -263,7 +263,7 @@ export default function MapAndForm({
                         className="relative ml-[6px] inline-block"
                       />
                     </button>
-                    <p className="mb-0 w-[90%] leading-[22px] text-13 mt-0 max-mdx:w-full">
+                    {/* <p className="mb-0 w-[90%] leading-[22px] text-13 mt-0 max-mdx:w-full">
                       {
                         "I understand that my data will be hold securely in accordance with the "
                       }
@@ -273,7 +273,7 @@ export default function MapAndForm({
                       >
                         privacy policy.
                       </Link>
-                    </p>
+                    </p> */}
                     <div
                       className="bg-[#f1fbec] text-[#54b783] border-[#cce8b3] p-[20px_25px_20px_30px] mb-[30px] leading-[22px] relative z-1 rounded-[4px] mt-[20px] border border-solid transition-all duration-600"
                       style={{
@@ -316,7 +316,7 @@ export default function MapAndForm({
               href={"https://maps.app.goo.gl/jrspCJMckSJ18q3w7"}
               target="_blank"
             >
-              Map
+              Harita
             </Link>
           </motion.div>
           <motion.div
@@ -373,7 +373,7 @@ export default function MapAndForm({
                     onBlur={handleBlurNameInput}
                     value={name}
                     type="text"
-                    placeholder="Enter your name*"
+                    placeholder="İsminizi girin*"
                     autoComplete="off"
                     name="name"
                     className="outline-0 border-solid border-b [background:_0_0] border-[--light-red] rounded-none py-[12px] px-[25px] w-full max-w-full resize-none text-16 text-[--medium-gray] placeholder-[--medium-gray] leading-[inherit] break-normal transition-all duration-300 bg-transparent pl-0 appearance-none block m-0 "
@@ -401,7 +401,7 @@ export default function MapAndForm({
                     onBlur={handleBlurEmailInput}
                     value={email}
                     type="text"
-                    placeholder="Enter your email*"
+                    placeholder="E-posta adresinizi girin*"
                     autoComplete="off"
                     name="email"
                     className="placeholder-[--medium-gray] outline-0 border-solid border-b [background:_0_0] border-[--light-red] rounded-none py-[12px] px-[25px] w-full max-w-full resize-none text-16 text-[--medium-gray] leading-[inherit] break-normal transition-all duration-300 bg-transparent pl-0 appearance-none block m-0"
@@ -427,7 +427,7 @@ export default function MapAndForm({
                   <textarea
                     name="comment"
                     rows={3}
-                    placeholder="Enter your message"
+                    placeholder="Mesajınız"
                     autoComplete="off"
                     className="placeholder-[--medium-gray] resize-none outline-0 border-b border-solid [background:_0_0] border-[--light-red] rounded-none py-[12px] px-[25px] w-full max-w-full text-16 text-[--medium-gray] leading-[inherit] break-words transition-all duration-300 bg-transparent pl-0 appearance-none block m-0"
                     style={{ backgroundPosition: "right 35px center" }}
@@ -442,7 +442,7 @@ export default function MapAndForm({
                       className="relative ml-[6px] inline-block"
                     />
                   </button>
-                  <p className="mb-0 w-[90%] leading-[22px] text-13 mt-0 max-mdx:w-full">
+                  {/* <p className="mb-0 w-[90%] leading-[22px] text-13 mt-0 max-mdx:w-full">
                     {
                       "I understand that my data will be hold securely in accordance with the "
                     }
@@ -452,7 +452,7 @@ export default function MapAndForm({
                     >
                       privacy policy.
                     </Link>
-                  </p>
+                  </p> */}
                   <div
                     className="bg-[#f1fbec] text-[#54b783] border-[#cce8b3] p-[20px_25px_20px_30px] mb-[30px] leading-[22px] relative z-1 rounded-[4px] mt-[20px] border border-solid transition-all duration-600"
                     style={{
