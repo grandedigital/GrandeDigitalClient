@@ -7,7 +7,7 @@ export default function Page() {
     <div>
       <Banner
         title="Projelerimiz"
-        text="Our skilled developers and designers make sure to deliver tried-tested efficient and robust designs."
+        text="Uzman geliştiricilerimiz ve tasarım ekibimiz, kullanıcı odaklı ve yüksek performanslı dijital çözümler üretir."
       />
       <Gallery />
       <MarqueeText />

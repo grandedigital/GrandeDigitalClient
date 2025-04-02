@@ -25,7 +25,7 @@ export default function Gallery({ title }: { title?: string }) {
               </h2>
             </div>
           )}
-          <div
+          {/* <div
             className={`px-[15px] text-center w-full max-w-full lgx:text-right lgx:flex-[0_0_auto] ${
               title ? "lgx:w-[58.33333333%]" : ""
             }`}
@@ -56,7 +56,7 @@ export default function Gallery({ title }: { title?: string }) {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
         <div className="row">
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full mdx:p-0">
