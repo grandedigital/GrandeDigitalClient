@@ -3,6 +3,12 @@ import Section1 from "@/components/contact/section1";
 import MarqueeText from "@/components/sections/marqueeText";
 import MapAndForm from "@/components/contact/mapAndForm";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Grande Digital | İletişim",
+  description: "İletişim content",
+};
+
 export default function Page() {
   return (
     <div>

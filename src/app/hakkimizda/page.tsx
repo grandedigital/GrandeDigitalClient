@@ -5,6 +5,12 @@ import Section3 from "@/components/about/sections/section3";
 //import OurTeam from "@/components/ourTeam/ourteam";
 import MarqueeText from "@/components/sections/marqueeText";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Grande Digital | Hakkımızda",
+  description: "Hakkımızda content",
+};
+
 export default function Page() {
   return (
     <div>

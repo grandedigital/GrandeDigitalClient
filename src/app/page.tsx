@@ -7,6 +7,13 @@ import Section2 from "@/components/sections/Section2";
 import Section3 from "@/components/sections/Section3";
 import Section4 from "@/components/sections/Section4";
 import Marquee from "@/components/sections/marqueeText";
+
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Grande Digital",
+  description: "Dijital Yazılım Ajansı",
+};
+
 export default function Home() {
   return (
     <div>
