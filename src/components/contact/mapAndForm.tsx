@@ -141,7 +141,7 @@ export default function MapAndForm({
       <section className="p-0">
         <div className="p-0 w-full mx-auto">
           <div ref={mapAndFormRef} className="row mx-0">
-            <div className="px-0 w-full max-w-full lgx:flex-[0_0_auto] lgx:w-1/2 bg-blue-300 bg-[url('/images/map.png')] bg-cover max-lgx:h-[600px] max-md:h-[400px] max-xsm:h-[300px] relative">
+            <div className="px-0 w-full max-w-full lgx:flex-[0_0_auto] lgx:w-1/2 bg-blue-300 bg-[url('/images/map.PNG')] bg-cover max-lgx:h-[600px] max-md:h-[400px] max-xsm:h-[300px] relative">
               <Link
                 className="bg-[--dark-gray2] text-white rounded-[4px] text-13 py-[8px] px-[30px] cursor-pointer border-2 border-transparent uppercase tracking-[.5px] font-spaceGrotesk transition-all duration-300 ease-in-out shadow-[0 5px_20px_rgba(0,0,0,.1)] font-medium inline-block text-center align-middle select-none m-0 leading-[1.5] relative top-[20px] left-[10px] hover:top-[15px]"
                 href={"https://maps.app.goo.gl/jrspCJMckSJ18q3w7"}
@@ -309,7 +309,7 @@ export default function MapAndForm({
             onAnimationComplete={() =>
               mapAndFormViewArea && setStartedHelloTextAnimation(true)
             }
-            className="px-0 w-full max-w-full lgx:flex-[0_0_auto] lgx:w-1/2 bg-blue-300 bg-[url('/images/map.png')] bg-cover max-lgx:h-[600px] max-md:h-[400px] max-xsm:h-[300px] relative"
+            className="px-0 w-full max-w-full lgx:flex-[0_0_auto] lgx:w-1/2 bg-blue-300 bg-[url('/images/map.PNG')] bg-cover max-lgx:h-[600px] max-md:h-[400px] max-xsm:h-[300px] relative"
           >
             <Link
               className="bg-[--dark-gray2] text-white rounded-[4px] text-13 py-[8px] px-[30px] cursor-pointer border-2 border-transparent uppercase tracking-[.5px] font-spaceGrotesk transition-all duration-300 ease-in-out shadow-[0 5px_20px_rgba(0,0,0,.1)] font-medium inline-block text-center align-middle select-none m-0 leading-[1.5] relative top-[20px] left-[10px] hover:top-[15px]"
