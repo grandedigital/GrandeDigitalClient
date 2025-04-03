@@ -86,7 +86,7 @@ export default function Header() {
                 >
                   <span className="py-[12px] px-[22px] inline-flex items-center relative overflow-hidden">
                     <HiOutlineMail size={14} className="mr-[6px]" />
-                    <span className="text-[--dark-gray] before:content-['Send_a_message'] transition-all duration-700 ease-[cubic-bezier(.15,.85,.31,1)] before:inline-block before:absolute before:whitespace-nowrap before:top-[50%] before:opacity-0 group-hover:before:opacity-100 before:left-[50%] before:translate-x-[-50%] before:translate-y-[100%] group-hover:text-white group-hover:translate-y-[-200%] group-hover:before:translate-x-[-50%] group-hover:before:translate-y-[150%]">
+                    <span className="text-[--dark-gray] before:content-['Mesaj_gönder'] transition-all duration-700 ease-[cubic-bezier(.15,.85,.31,1)] before:inline-block before:absolute before:whitespace-nowrap before:top-[50%] before:opacity-0 group-hover:before:opacity-100 before:left-[50%] before:translate-x-[-50%] before:translate-y-[100%] group-hover:text-white group-hover:translate-y-[-200%] group-hover:before:translate-x-[-50%] group-hover:before:translate-y-[150%]">
                       Mesaj gönder
                     </span>
                   </span>
