@@ -5,6 +5,8 @@ import { mapValue } from "@/utils/global";
 import Link from "next/link";
 
 export default function GalleryItem({ data }: { data: any }) {
+  console.log(data);
+  
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
   const [translateX, setTranslateX] = useState(0);
@@ -108,13 +110,13 @@ export default function GalleryItem({ data }: { data: any }) {
           </div>
           <div className="overflow-hidden transition-all duration-400 ease-[cubic-bezier(.37,.31,.2,.85)] leading-[28px] text-[15px] text-white opacity-0 group-hover:opacity-60">
             <span className="opacity-100 block translate-y-[50%] transition-all duration-500 ease-[cubic-bezier(.37,.31,.2,.85)] group-hover:translate-y-0">
-              {data?.subTitle}
+              {data?.shortDesc}
             </span>
           </div>
         </div>
       </Link>
       <div className="absolute w-full h-full bg-black opacity-0 group-hover:opacity-50 transition-all duration-400 ease-[cubic-bezier(.37,0,.63,1)]"></div>
-      <img src={`/images/${data?.img}`} alt="" />
+      <img src={`/images/${data?.coverImage}`} alt="" />
     </div>
   );
 }

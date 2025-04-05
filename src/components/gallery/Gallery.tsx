@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import galleryTabs from "../../data/galleryTabs.json";
 import GalleryItem from "./galleryItem";
-import galleryItems from "../../data/galleryItems.json";
+import projects from "../../data/projects.json"
 
 export default function Gallery({ title }: { title?: string }) {
   const [activeMenuId, setActiveMenuId] = useState(1);
@@ -61,7 +61,7 @@ export default function Gallery({ title }: { title?: string }) {
         <div className="row">
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full mdx:p-0">
             <ul className="list-none p-0 m-0 text-center md:my-0 md:px[-10px] flex flex-wrap transition-all duration-400 ease-ease">
-              {galleryItems?.map((item, index) => (
+              {projects?.map((item, index) => (
                 <li
                   key={index}
                   className="w-[33.33%] p-[10px] list-none max-mdx:w-1/2 max-md:w-1/2 max-xsm:w-full group transition-all duration-400 ease-ease"
