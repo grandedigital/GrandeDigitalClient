@@ -6,7 +6,7 @@ import galleryTabs from "../../data/galleryTabs.json";
 import GalleryItem from "./galleryItem";
 import projects from "../../data/projects.json"
 
-export default function Gallery({ title }: { title?: string }) {
+export default function Gallery({ title, homepage }: { title?: string, homepage?: boolean }) {
   const [activeMenuId, setActiveMenuId] = useState(1);
 
   const handleClickGalleryNavItem = (e: any, selectedNavItemId: number) => {
@@ -16,11 +16,11 @@ export default function Gallery({ title }: { title?: string }) {
 
   return (
     <section className="pb-0 relative overflow-hidden max-2xl:pt-[90px] max-mdx:pt-[75px] max-md:pt-[50px]">
-      <div className="custom-container">
+      <div className="w-full">
         <div className="row mb-[5%] items-center">
           {title && (
             <div className="px-[15px] text-center w-full max-w-full lgx:text-left lgx:flex-[0_0_auto] lgx:w-[41.66666667%] max-lgx:mb-[30px]">
-              <h2 className="font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-0">
+              <h2 className="text-center font-semibold tracking-[-3px] text-[--dark-gray2] font-spaceGrotesk mb-0">
                 {title}
               </h2>
             </div>
@@ -61,10 +61,10 @@ export default function Gallery({ title }: { title?: string }) {
         <div className="row">
           <div className="px-[15px] flex-[0_0_auto] w-full max-w-full mdx:p-0">
             <ul className="list-none p-0 m-0 text-center md:my-0 md:px[-10px] flex flex-wrap transition-all duration-400 ease-ease">
-              {projects?.map((item, index) => (
+              {projects?.slice(0, homepage ? 4 : projects.length).map((item, index) => (
                 <li
                   key={index}
-                  className="w-[33.33%] p-[10px] list-none max-mdx:w-1/2 max-md:w-1/2 max-xsm:w-full group transition-all duration-400 ease-ease"
+                  className="w-[50%] p-[10px] list-none max-mdx:w-1/2 max-md:w-1/2 max-xsm:w-full group transition-all duration-400 ease-ease"
                 >
                   <GalleryItem data={item} />
                 </li>

@@ -6,7 +6,7 @@ export default function Section1({ data }: { data?: any }) {
       <div className="custom-container">
         <div className="row items-center justify-between">
           <div className="px-[15px] text-center flex-[0_0_auto] w-full max-w-full md:text-left md:w-1/2 mdx:w-[41.66666667%] max-md:mb-[40px] max-md:mt-[30px]">
-            <span className="font-bold mb-[15px] w-[80%] tracking-[-3px] text-[--dark-gray2] leading-[5rem] text-[5.625rem] font-spaceGrotesk block max-lgx:w-full">
+            <span className={`font-bold mb-[15px] w-[80%] tracking-[-3px] text-[--dark-gray2] leading-[5rem] ${data?.fontSize ? 'text-[5rem]' : 'text-[5.625rem]'} font-spaceGrotesk block max-lgx:w-full`}>
               {data?.title}
             </span>
             <p className="w-[75%] mb-[25px] mt-0 max-lgx:w-full">

@@ -26,11 +26,11 @@ export default async function Page({ params }: { params?: any }) {
   return (
     <div>
       <Section1 data={data} />
-      <Section2 data={data} />
       <Section3 data={data} />
-      {data?.detailPhoto2 && <Section4 data={data} />}
+      <Section2 data={data} />
+      {/* {data?.detailPhoto2 && <Section4 data={data} />}
       {data?.detailPhoto2Desc1 && <Section5 data={data} />}
-      {data?.galleryPhoto1 && <DetailGallery data={data} />}
+      {data?.galleryPhoto1 && <DetailGallery data={data} />} */}
       <MarqueeText />
     </div>
   );

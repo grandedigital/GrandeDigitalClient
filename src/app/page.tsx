@@ -21,7 +21,7 @@ export default function Home() {
       <Brands />
       <Section1 />
       <Section2 />
-      <Gallery title="Neler Yaptık" />
+      <Gallery homepage={true} title="Neler Yaptık" />
       <Section3 />
       <Section4 />
       {/* <Posts isNavigateButtonActive={true} /> */}
