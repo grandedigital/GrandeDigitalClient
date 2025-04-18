@@ -126,10 +126,10 @@ export default function Section1({ text }: { text: String }) {
                 </div>
                 <div>
                   <span className="font-semibold mb-[5px] text-[--dark-gray2] text-19 block">
-                    Bizimle Çalışın
+                    Bizimle Çalışın (Fikirlerin İçin)
                   </span>
                   <p className="mb-0 w-[80%] mx-auto mt-0 max-xxl:w-full max-mdx:w-[75%]">
-                    Kariyerinizi bir adım ileri taşıyın. Ekibimize katılın!
+                    Projeleriniz bir adım atın. Bizimle tanışın!
                   </p>
                 </div>
               </div>
@@ -286,10 +286,10 @@ export default function Section1({ text }: { text: String }) {
               </div>
               <div>
                 <span className="font-semibold mb-[5px] text-[--dark-gray2] text-19 block">
-                  Bizimle Çalışın
+                  Bizimle Çalışın (Fikirlerin İçin)
                 </span>
                 <p className="mb-0 w-[80%] mx-auto mt-0 max-xxl:w-full max-mdx:w-[75%]">
-                  Kariyerinizi bir adım ileri taşıyın. Ekibimize katılın!
+                  Projeleriniz bir adım atın. Bizimle tanışın!
                 </p>
               </div>
             </div>
